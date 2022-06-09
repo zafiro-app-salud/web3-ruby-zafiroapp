@@ -8,9 +8,6 @@ Direccion de Contrato desplegado en la red ALFAJORES
 0x2594C4A55e2147d29c56797cFE81d54C22b38315
 ```
 
-# ruby-zafiro
-# Zafiro app salud 
-
 
 
 <a name="development"></a>
@@ -95,9 +92,6 @@ docker-compose run -d --rm rails-starter_ruby_1 rake db:migrate
 ```bash
 docker exec -i rails-starter_db_1 bash -c "psql -U {_user} -d {_database} {_dbfile}"
 ```
-
-
-
 
 
 
