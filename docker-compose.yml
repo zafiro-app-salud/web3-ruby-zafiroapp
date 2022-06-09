@@ -6,8 +6,7 @@ services:
     volumes:
       - .:/web3-ruby-zafiroapp
     ports:
-      - "3000:3000"
- 
+      - "3000:3000" 
 
 volumes:
     ruby_web3:
