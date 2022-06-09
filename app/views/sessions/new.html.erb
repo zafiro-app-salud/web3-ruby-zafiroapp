@@ -1,11 +1,7 @@
-<h1>Ethereum Log-In</h1>
+<h1>CELO Log-In</h1>
 <p>
   <em>
-    Connect to an Ethereum wallet, retrieve the user's account,
-    generate a message containing the request time and the user's specific
-    nonce, and let them sign this message with the Ethereum account they
-    control. If the signature is not expired and matches the Ethereum address
-    and nonce in the database, assume the user cryptographically authenticated.
+    Conéctese a una billetera CELO o Ethereum.
   </em>
 </p>
 <p>
@@ -21,12 +17,12 @@
     instead? or
     <%= link_to "go back", root_path %>?
   <% else %>
-    Hello
+    Hola
     <code><%= current_user.eth_address %></code>!
-    Do you wish to
-    <%= link_to "log out", logout_path, method: :destroy %>
-    or
-    <%= link_to "go back", root_path %>?
+    Deseas
+    <%= link_to "Cerrar sesion", logout_path, method: :destroy %>
+    o
+    <%= link_to "Regresar", root_path %>?
   <% end %>
 </p>
 

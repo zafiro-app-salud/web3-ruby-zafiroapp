@@ -1,32 +1,61 @@
-<h1>Ethereum Sign-Up</h1>
-<p>
-  <em>
-    Connect to an Ethereum wallet and retrieve an Ethereum
-    account. Allow the user to also specify a user name. For simplicity, we do
-    not verify the user actually owning the account. This is only required for
-    log-ins.
-  </em>
-</p>
-<p>
-  <% if !logged_in? %>
-    <%= form_for @user, url: signup_path do |form| %>
-      <%= form.label "Name" %>
-      <%= form.text_field :username %> <br />
-      <%= form.text_field :eth_address, readonly: true, class: "eth_address" %> <br />
-    <% end %>
-    <button class="eth_connect">Sign-up with Ethereum</button>
-    <br /><br />... or
-    <%= link_to "log in", login_path %>
-    instead? or
-    <%= link_to "go back", root_path %>?
-  <% else %>
-    Hello
-    <code><%= current_user.eth_address %></code>!
-    Do you wish to
-    <%= link_to "log out", logout_path, method: :destroy %>
-    or
-    <%= link_to "go back", root_path %>?
-  <% end %>
-</p>
+<br> <div class="container ">
+       
+        <div class="row">
+          <div class="col col-lg-4  ">
+          <img src="/images/fondoNew.png" alt="" class="barraInteriro">
+          </div>
+          <div class="col col-lg-8">
+          <div class="card cartaNewUser shadow-sm p-3 mb-5 ">
+           <div class="row">
+            <div class="center">
+              <h3 class="azulitoZafiro">Regístrate</h3>
+              <span>¿Eres un nuevo especialista o usuario? ¡Regístrate aquí!</span>
+            </div>
+             <% if !logged_in? %>
+                <%= form_for @user, url: signup_path do |form| %>
+                    <div class="form-group col-lg-12">
+                      <%= form.label :username , "Nombre de Usuario", class:"labeles"%>
+                    <div class=" ">
+                      <%= form.text_field :username, class: "form-control labeles" %>
+                    </div>
+                    <div class="form-group col-lg-12">
+                    <%= form.label :email , "Correo electronico",class:"labeles"%>
+                    <div class=" ">
+                      <%= form.text_field :email, class: "form-control labeles" %>
+                    </div>
+                  </div>
+                  
+                  <%= form.text_field :eth_address, readonly: true, class: "eth_address" %> <br />
+                <% end %>
+                <button class="eth_connect">Sign-up with CELO</button>
+                <br /><br />... or
+                <%= link_to "log in", login_path %>
+                instead? or
+                <%= link_to "go back", root_path %>?
+              <% else %>
+                Hola
+                <code><%= current_user.eth_address %></code>!
+                Deseas
+                <%= link_to "Cerrar Sesion", logout_path, method: :destroy %>
+                or
+                <%= link_to "regresar", root_path %>?
+            <% end %>
+              
+              
+                
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+              </div>
+        </div>
+          </div>
+
+          </div>
+        </div>
+
+       
+    </div>    
+
 
 <%= javascript_pack_tag "users_new" %>
