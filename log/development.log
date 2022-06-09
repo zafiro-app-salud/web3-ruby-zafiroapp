@@ -2789,3 +2789,1642 @@ Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 00:58:01 -0500
   
 ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
   
+Started GET "/" for ::1 at 2022-06-09 01:03:21 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2101)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.19
+info If you think this is a bug, please open a bug report with the information provided in "/home/jsagudelo/codigo/blockchain/web3-ruby-zafiroapp/yarn-error.log".
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error An unexpected error occurred: "/home/jsagudelo/codigo/blockchain/web3-ruby-zafiroapp/package.json: Unexpected token { in JSON at position 1426".
+error An unexpected error occurred: "/home/jsagudelo/codigo/blockchain/web3-ruby-zafiroapp/package.json: Unexpected token { in JSON at position 1426".
+
+  Rendered partials/_navbar.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 920.3ms | Allocations: 6453)
+Completed 200 OK in 949ms (Views: 920.6ms | ActiveRecord: 0.3ms | Allocations: 6878)
+
+
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 01:03:22 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/images/appstore.png" for ::1 at 2022-06-09 01:03:22 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/appstore.png"):
+  
+Started GET "/images/android.png" for ::1 at 2022-06-09 01:03:22 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/android.png"):
+  
+Started GET "/" for ::1 at 2022-06-09 01:08:47 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 12.7ms | Allocations: 10814)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/jsagudelo/codigo/blockchain/web3-ruby-zafiroapp/public/packs
+[Webpacker] warning package.json: "dependencies" has dependency "dotenv" with range "^8.2.0" that collides with a dependency in "devDependencies" of the same name with version "^10.0.0"
+
+[Webpacker] Hash: 54671992ecc1f9838f64
+Version: webpack 4.46.0
+Time: 1767ms
+Built at: 09/06/2022 1:08:51 a. m.
+                                      Asset      Size        Chunks                         Chunk Names
+     js/application-94433b8ae2f91c3bc3ac.js   122 KiB   application  [emitted] [immutable]  application
+ js/application-94433b8ae2f91c3bc3ac.js.map   136 KiB   application  [emitted] [dev]        application
+    js/sessions_new-b5f2bdd08b8bc5aa40a3.js  35.9 KiB  sessions_new  [emitted] [immutable]  sessions_new
+js/sessions_new-b5f2bdd08b8bc5aa40a3.js.map    36 KiB  sessions_new  [emitted] [dev]        sessions_new
+       js/users_new-6bfa82717f792c01e558.js  32.5 KiB     users_new  [emitted] [immutable]  users_new
+   js/users_new-6bfa82717f792c01e558.js.map  34.2 KiB     users_new  [emitted] [dev]        users_new
+                              manifest.json  1.01 KiB                [emitted]              
+Entrypoint application = js/application-94433b8ae2f91c3bc3ac.js js/application-94433b8ae2f91c3bc3ac.js.map
+Entrypoint sessions_new = js/sessions_new-b5f2bdd08b8bc5aa40a3.js js/sessions_new-b5f2bdd08b8bc5aa40a3.js.map
+Entrypoint users_new = js/users_new-6bfa82717f792c01e558.js js/users_new-6bfa82717f792c01e558.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/sessions_new.js] 6.17 KiB {sessions_new} [built]
+[./app/javascript/packs/users_new.js] 2.99 KiB {users_new} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 5 hidden modules
+
+  Rendered partials/_navbar.html.erb (Duration: 0.5ms | Allocations: 320)
+  Rendered partials/_alerts.html.erb (Duration: 0.4ms | Allocations: 183)
+  Rendered partials/_footer.html.erb (Duration: 0.3ms | Allocations: 215)
+  Rendered partials/_ui-js.html.erb (Duration: 0.2ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 3544.3ms | Allocations: 24969)
+Completed 200 OK in 3554ms (Views: 3545.9ms | ActiveRecord: 0.7ms | Allocations: 28666)
+
+
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 01:08:51 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/images/appstore.png" for ::1 at 2022-06-09 01:08:51 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/appstore.png"):
+  
+Started GET "/images/android.png" for ::1 at 2022-06-09 01:08:51 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/android.png"):
+  
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 01:08:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/" for ::1 at 2022-06-09 01:11:30 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 15.1ms | Allocations: 3162)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.5ms | Allocations: 305)
+  Rendered partials/_alerts.html.erb (Duration: 0.4ms | Allocations: 181)
+  Rendered partials/_footer.html.erb (Duration: 0.4ms | Allocations: 214)
+  Rendered partials/_ui-js.html.erb (Duration: 0.3ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 28.9ms | Allocations: 7796)
+Completed 200 OK in 35ms (Views: 30.1ms | ActiveRecord: 1.1ms | Allocations: 8849)
+
+
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 01:11:31 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/images/appstore.png" for ::1 at 2022-06-09 01:11:31 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/appstore.png"):
+  
+Started GET "/images/android.png" for ::1 at 2022-06-09 01:11:31 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/android.png"):
+  
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 01:11:31 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/" for ::1 at 2022-06-09 01:12:33 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 15.5ms | Allocations: 2099)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.2ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 32.7ms | Allocations: 5210)
+Completed 200 OK in 41ms (Views: 32.7ms | ActiveRecord: 1.5ms | Allocations: 5653)
+
+
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 01:12:33 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/images/appstore.png" for ::1 at 2022-06-09 01:12:33 -0500
+Started GET "/images/android.png" for ::1 at 2022-06-09 01:12:33 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/appstore.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/android.png"):
+  
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 01:12:34 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/" for ::1 at 2022-06-09 01:14:06 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2099)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 5210)
+Completed 200 OK in 23ms (Views: 17.1ms | ActiveRecord: 0.4ms | Allocations: 5632)
+
+
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 01:14:06 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/images/appstore.png" for ::1 at 2022-06-09 01:14:06 -0500
+Started GET "/images/android.png" for ::1 at 2022-06-09 01:14:06 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/android.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/appstore.png"):
+  
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 01:14:06 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/pages/contrato" for ::1 at 2022-06-09 01:14:12 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/contrato"):
+  
+Started GET "/pages/contrato" for ::1 at 2022-06-09 01:14:22 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/contrato"):
+  
+Started GET "/pages/contrato" for ::1 at 2022-06-09 01:15:05 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/contrato"):
+  
+Started GET "/pages/contrato" for ::1 at 2022-06-09 01:15:59 -0500
+Processing by PagesController#contrato as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contrato.html within layouts/application
+  Rendered pages/contrato.html within layouts/application (Duration: 0.6ms | Allocations: 161)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.1ms | Allocations: 53)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 53)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 3482)
+Completed 200 OK in 14ms (Views: 13.1ms | Allocations: 4232)
+
+
+Started GET "/pages/vendor/fontawesome-free/css/all.min.css" for ::1 at 2022-06-09 01:16:00 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/fontawesome-free/css/all.min.css"):
+  
+Started GET "/pages/css/estilo.css" for ::1 at 2022-06-09 01:16:00 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/css/estilo.css"):
+  
+Started GET "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2022-06-09 01:16:00 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+Started GET "/pages/vendor/jquery-easing/jquery.easing.min.js" for ::1 at 2022-06-09 01:16:00 -0500
+Started GET "/pages/js/alertas.js" for ::1 at 2022-06-09 01:16:00 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/jquery-easing/jquery.easing.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/alertas.js"):
+  
+Started GET "/pages/js/connection.js" for ::1 at 2022-06-09 01:16:00 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/connection.js"):
+  
+Started GET "/js/wallet_connect.js" for ::1 at 2022-06-09 01:16:00 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/wallet_connect.js"):
+  
+Started GET "/js/contract_read.js" for ::1 at 2022-06-09 01:16:00 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/contract_read.js"):
+  
+Started GET "/js/contract_write.js" for ::1 at 2022-06-09 01:16:00 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/contract_write.js"):
+  
+Started GET "/pages/contrato" for ::1 at 2022-06-09 01:17:46 -0500
+Processing by PagesController#contrato as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contrato.html within layouts/application
+  Rendered pages/contrato.html within layouts/application (Duration: 0.5ms | Allocations: 56)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 9eb803231555d21365a2
+Version: webpack 4.46.0
+Time: 6632ms
+Built at: 09/06/2022 1:17:54 a. m.
+                                        Asset      Size          Chunks                         Chunk Names
+           js/alertas-d749b8cf867e6d43eeb8.js  4.63 KiB         alertas  [emitted] [immutable]  alertas
+       js/alertas-d749b8cf867e6d43eeb8.js.map  4.56 KiB         alertas  [emitted] [dev]        alertas
+       js/application-94433b8ae2f91c3bc3ac.js   122 KiB     application  [emitted] [immutable]  application
+   js/application-94433b8ae2f91c3bc3ac.js.map   136 KiB     application  [emitted] [dev]        application
+        js/connection-9bcfe0392ce87f78f1b5.js   933 KiB      connection  [emitted] [immutable]  connection
+    js/connection-9bcfe0392ce87f78f1b5.js.map   917 KiB      connection  [emitted] [dev]        connection
+      js/contractData-6d099cb090d54edefe3e.js  4.64 KiB    contractData  [emitted] [immutable]  contractData
+  js/contractData-6d099cb090d54edefe3e.js.map  4.74 KiB    contractData  [emitted] [dev]        contractData
+     js/contract_read-65b05c18f7bca6857661.js  4.39 KiB   contract_read  [emitted] [immutable]  contract_read
+ js/contract_read-65b05c18f7bca6857661.js.map  3.53 KiB   contract_read  [emitted] [dev]        contract_read
+    js/contract_write-e415840fcb9d75aa8f24.js  4.44 KiB  contract_write  [emitted] [immutable]  contract_write
+js/contract_write-e415840fcb9d75aa8f24.js.map  3.53 KiB  contract_write  [emitted] [dev]        contract_write
+          js/ethers-5-d6d97d4eb8b24774f3a4.js   924 KiB        ethers-5  [emitted] [immutable]  ethers-5
+      js/ethers-5-d6d97d4eb8b24774f3a4.js.map   913 KiB        ethers-5  [emitted] [dev]        ethers-5
+      js/sessions_new-b5f2bdd08b8bc5aa40a3.js  35.9 KiB    sessions_new  [emitted] [immutable]  sessions_new
+  js/sessions_new-b5f2bdd08b8bc5aa40a3.js.map    36 KiB    sessions_new  [emitted] [dev]        sessions_new
+         js/users_new-6bfa82717f792c01e558.js  32.5 KiB       users_new  [emitted] [immutable]  users_new
+     js/users_new-6bfa82717f792c01e558.js.map  34.2 KiB       users_new  [emitted] [dev]        users_new
+    js/wallet_connect-ebc7d6a9ab189f5f81b1.js  4.29 KiB  wallet_connect  [emitted] [immutable]  wallet_connect
+js/wallet_connect-ebc7d6a9ab189f5f81b1.js.map  3.53 KiB  wallet_connect  [emitted] [dev]        wallet_connect
+                                manifest.json  3.33 KiB                  [emitted]              
+Entrypoint alertas = js/alertas-d749b8cf867e6d43eeb8.js js/alertas-d749b8cf867e6d43eeb8.js.map
+Entrypoint application = js/application-94433b8ae2f91c3bc3ac.js js/application-94433b8ae2f91c3bc3ac.js.map
+Entrypoint connection = js/connection-9bcfe0392ce87f78f1b5.js js/connection-9bcfe0392ce87f78f1b5.js.map
+Entrypoint contract_read = js/contract_read-65b05c18f7bca6857661.js js/contract_read-65b05c18f7bca6857661.js.map
+Entrypoint contract_write = js/contract_write-e415840fcb9d75aa8f24.js js/contract_write-e415840fcb9d75aa8f24.js.map
+Entrypoint contractData = js/contractData-6d099cb090d54edefe3e.js js/contractData-6d099cb090d54edefe3e.js.map
+Entrypoint ethers-5 = js/ethers-5-d6d97d4eb8b24774f3a4.js js/ethers-5-d6d97d4eb8b24774f3a4.js.map
+Entrypoint sessions_new = js/sessions_new-b5f2bdd08b8bc5aa40a3.js js/sessions_new-b5f2bdd08b8bc5aa40a3.js.map
+Entrypoint users_new = js/users_new-6bfa82717f792c01e558.js js/users_new-6bfa82717f792c01e558.js.map
+Entrypoint wallet_connect = js/wallet_connect-ebc7d6a9ab189f5f81b1.js js/wallet_connect-ebc7d6a9ab189f5f81b1.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/alertas.js] 774 bytes {alertas} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/connection.js] 6.98 KiB {connection} [built]
+[./app/javascript/packs/contractData.js] 758 bytes {contractData} [built]
+[./app/javascript/packs/contract_read.js] 498 bytes {contract_read} [built] [failed] [1 error]
+[./app/javascript/packs/contract_write.js] 542 bytes {contract_write} [built] [failed] [1 error]
+[./app/javascript/packs/ethers-5.1.esm.min.js] 871 KiB {ethers-5} {connection} [built]
+[./app/javascript/packs/sessions_new.js] 6.17 KiB {sessions_new} [built]
+[./app/javascript/packs/users_new.js] 2.99 KiB {users_new} [built]
+[./app/javascript/packs/wallet_connect.js] 382 bytes {wallet_connect} [built] [failed] [1 error]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 863 bytes {connection} {ethers-5} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 8 hidden modules
+
+ERROR in ./app/javascript/packs/contract_read.js 37:14
+Module parse failed: Cannot use keyword 'await' outside an async function (37:14)
+File was processed with these loaders:
+ * ./node_modules/babel-loader/lib/index.js
+You may need an additional loader to handle the result of these loaders.
+| contractAddress = '0x2594C4A55e2147d29c56797cFE81d54C22b38315';
+| var contract = new ethers.Contract(contractAddress, abi, signer);
+> var message = await contract.message();
+| document.getElementById('message').innerHTML = message;
+
+ERROR in ./app/javascript/packs/contract_write.js 44:14
+Module parse failed: Cannot use keyword 'await' outside an async function (44:14)
+File was processed with these loaders:
+ * ./node_modules/babel-loader/lib/index.js
+You may need an additional loader to handle the result of these loaders.
+| contractAddress = '0x2594C4A55e2147d29c56797cFE81d54C22b38315';
+| var contract = new ethers.Contract(contractAddress, abi, signer);
+> var account = await metamaskConfig.getAccount(); // check if metamask is installed in browser
+| 
+| if (metamaskConfig.isMetamaskInstalled) {
+
+ERROR in ./app/javascript/packs/wallet_connect.js 57:18
+Module parse failed: Cannot use keyword 'await' outside an async function (57:18)
+File was processed with these loaders:
+ * ./node_modules/babel-loader/lib/index.js
+You may need an additional loader to handle the result of these loaders.
+| 
+| if (window.ethereum) {
+>   var _accounts = await window.ethereum.request({
+|     method: 'eth_accounts'
+|   });
+
+
+warning package.json: "dependencies" has dependency "dotenv" with range "^8.2.0" that collides with a dependency in "devDependencies" of the same name with version "^10.0.0"
+
+  Rendered partials/_navbar.html.erb (Duration: 0.2ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 8453.0ms | Allocations: 4606)
+Completed 200 OK in 8461ms (Views: 8454.3ms | Allocations: 5036)
+
+
+Started GET "/pages/vendor/fontawesome-free/css/all.min.css" for ::1 at 2022-06-09 01:17:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/fontawesome-free/css/all.min.css"):
+  
+Started GET "/pages/css/estilo.css" for ::1 at 2022-06-09 01:17:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/css/estilo.css"):
+  
+Started GET "/pages/js/alertas.js" for ::1 at 2022-06-09 01:17:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/alertas.js"):
+  
+Started GET "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2022-06-09 01:17:55 -0500
+Started GET "/pages/vendor/jquery-easing/jquery.easing.min.js" for ::1 at 2022-06-09 01:17:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/jquery-easing/jquery.easing.min.js"):
+  
+Started GET "/js/wallet_connect.js" for ::1 at 2022-06-09 01:17:56 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/wallet_connect.js"):
+  
+Started GET "/pages/js/connection.js" for ::1 at 2022-06-09 01:17:56 -0500
+Started GET "/js/contract_read.js" for ::1 at 2022-06-09 01:17:56 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/contract_read.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/connection.js"):
+  
+Started GET "/js/contract_write.js" for ::1 at 2022-06-09 01:17:56 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/contract_write.js"):
+  
+Started GET "/pages/contrato" for ::1 at 2022-06-09 01:20:02 -0500
+Processing by PagesController#contrato as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contrato.html within layouts/application
+  Rendered pages/contrato.html within layouts/application (Duration: 0.1ms | Allocations: 56)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.2ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 3324)
+Completed 200 OK in 29ms (Views: 21.3ms | Allocations: 3739)
+
+
+Started GET "/pages/vendor/fontawesome-free/css/all.min.css" for ::1 at 2022-06-09 01:20:02 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/fontawesome-free/css/all.min.css"):
+  
+Started GET "/pages/css/estilo.css" for ::1 at 2022-06-09 01:20:02 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/css/estilo.css"):
+  
+Started GET "/pages/vendor/jquery-easing/jquery.easing.min.js" for ::1 at 2022-06-09 01:20:02 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/jquery-easing/jquery.easing.min.js"):
+  
+Started GET "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2022-06-09 01:20:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+Started GET "/pages/js/alertas.js" for ::1 at 2022-06-09 01:20:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/alertas.js"):
+  
+Started GET "/js/wallet_connect.js" for ::1 at 2022-06-09 01:20:03 -0500
+Started GET "/pages/js/connection.js" for ::1 at 2022-06-09 01:20:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/wallet_connect.js"):
+  
+Started GET "/js/contract_read.js" for ::1 at 2022-06-09 01:20:03 -0500
+Started GET "/js/contract_write.js" for ::1 at 2022-06-09 01:20:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/contract_write.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/connection.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/contract_read.js"):
+  
+Started GET "/pages/contrato" for ::1 at 2022-06-09 01:20:08 -0500
+Processing by PagesController#contrato as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contrato.html within layouts/application
+  Rendered pages/contrato.html within layouts/application (Duration: 0.1ms | Allocations: 56)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.2ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 3324)
+Completed 200 OK in 28ms (Views: 19.1ms | Allocations: 3739)
+
+
+Started GET "/pages/vendor/fontawesome-free/css/all.min.css" for ::1 at 2022-06-09 01:20:08 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/fontawesome-free/css/all.min.css"):
+  
+Started GET "/pages/css/estilo.css" for ::1 at 2022-06-09 01:20:09 -0500
+Started GET "/pages/vendor/jquery-easing/jquery.easing.min.js" for ::1 at 2022-06-09 01:20:09 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/css/estilo.css"):
+  
+Started GET "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2022-06-09 01:20:09 -0500
+Started GET "/pages/js/alertas.js" for ::1 at 2022-06-09 01:20:09 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/jquery-easing/jquery.easing.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/alertas.js"):
+  
+Started GET "/js/wallet_connect.js" for ::1 at 2022-06-09 01:20:09 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/wallet_connect.js"):
+  
+Started GET "/pages/js/connection.js" for ::1 at 2022-06-09 01:20:09 -0500
+Started GET "/js/contract_write.js" for ::1 at 2022-06-09 01:20:09 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/connection.js"):
+  
+Started GET "/js/contract_read.js" for ::1 at 2022-06-09 01:20:09 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/contract_write.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/contract_read.js"):
+  
+Started GET "/pages/contrato" for ::1 at 2022-06-09 01:21:28 -0500
+Processing by PagesController#contrato as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contrato.html within layouts/application
+  Rendered pages/contrato.html within layouts/application (Duration: 0.1ms | Allocations: 56)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.2ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 3324)
+Completed 200 OK in 25ms (Views: 17.8ms | Allocations: 3738)
+
+
+Started GET "/pages/vendor/fontawesome-free/css/all.min.css" for ::1 at 2022-06-09 01:21:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/fontawesome-free/css/all.min.css"):
+  
+Started GET "/pages/css/estilo.css" for ::1 at 2022-06-09 01:21:29 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/css/estilo.css"):
+  
+Started GET "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2022-06-09 01:21:29 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+Started GET "/pages/js/alertas.js" for ::1 at 2022-06-09 01:21:29 -0500
+Started GET "/pages/vendor/jquery-easing/jquery.easing.min.js" for ::1 at 2022-06-09 01:21:29 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/alertas.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/jquery-easing/jquery.easing.min.js"):
+  
+Started GET "/pages/js/connection.js" for ::1 at 2022-06-09 01:21:29 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/connection.js"):
+  
+Started GET "/img/loader.gif" for ::1 at 2022-06-09 01:21:29 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/img/loader.gif"):
+  
+Started GET "/img/loader.gif" for ::1 at 2022-06-09 01:21:47 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/img/loader.gif"):
+  
+Started GET "/pages/contrato" for ::1 at 2022-06-09 01:22:05 -0500
+Processing by PagesController#contrato as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contrato.html within layouts/application
+  Rendered pages/contrato.html within layouts/application (Duration: 0.1ms | Allocations: 56)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.3ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 32.8ms | Allocations: 3324)
+Completed 200 OK in 34ms (Views: 33.6ms | Allocations: 3738)
+
+
+Started GET "/pages/vendor/fontawesome-free/css/all.min.css" for ::1 at 2022-06-09 01:22:06 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/fontawesome-free/css/all.min.css"):
+  
+Started GET "/pages/css/estilo.css" for ::1 at 2022-06-09 01:22:06 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/css/estilo.css"):
+  
+Started GET "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2022-06-09 01:22:06 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+Started GET "/pages/js/alertas.js" for ::1 at 2022-06-09 01:22:06 -0500
+Started GET "/pages/vendor/jquery-easing/jquery.easing.min.js" for ::1 at 2022-06-09 01:22:06 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/jquery-easing/jquery.easing.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/alertas.js"):
+  
+Started GET "/pages/js/connection.js" for ::1 at 2022-06-09 01:22:06 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/connection.js"):
+  
+Started GET "/img/loader.gif" for ::1 at 2022-06-09 01:22:06 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/img/loader.gif"):
+  
+Started GET "/pages/contrato" for ::1 at 2022-06-09 01:39:37 -0500
+Processing by PagesController#contrato as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contrato.html within layouts/application
+  Rendered pages/contrato.html within layouts/application (Duration: 0.1ms | Allocations: 56)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 3324)
+Completed 200 OK in 23ms (Views: 16.6ms | Allocations: 3738)
+
+
+Started GET "/pages/vendor/fontawesome-free/css/all.min.css" for ::1 at 2022-06-09 01:39:38 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/fontawesome-free/css/all.min.css"):
+  
+Started GET "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2022-06-09 01:39:38 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+Started GET "/pages/css/estilo.css" for ::1 at 2022-06-09 01:39:38 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/css/estilo.css"):
+  
+Started GET "/pages/vendor/jquery-easing/jquery.easing.min.js" for ::1 at 2022-06-09 01:39:38 -0500
+Started GET "/pages/js/alertas.js" for ::1 at 2022-06-09 01:39:38 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/jquery-easing/jquery.easing.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/alertas.js"):
+  
+Started GET "/pages/js/connection.js" for ::1 at 2022-06-09 01:39:38 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/connection.js"):
+  
+Started GET "/img/loader.gif" for ::1 at 2022-06-09 01:39:38 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/img/loader.gif"):
+  
+Started GET "/pages/contrato" for ::1 at 2022-06-09 01:41:22 -0500
+Processing by PagesController#contrato as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contrato.html within layouts/application
+  Rendered pages/contrato.html within layouts/application (Duration: 0.2ms | Allocations: 56)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/jsagudelo/codigo/blockchain/web3-ruby-zafiroapp/public/packs
+[Webpacker] warning package.json: "dependencies" has dependency "dotenv" with range "^8.2.0" that collides with a dependency in "devDependencies" of the same name with version "^10.0.0"
+
+[Webpacker] Hash: 54671992ecc1f9838f64
+Version: webpack 4.46.0
+Time: 729ms
+Built at: 09/06/2022 1:41:25 a. m.
+                                      Asset      Size        Chunks                         Chunk Names
+     js/application-94433b8ae2f91c3bc3ac.js   122 KiB   application  [emitted] [immutable]  application
+ js/application-94433b8ae2f91c3bc3ac.js.map   136 KiB   application  [emitted] [dev]        application
+    js/sessions_new-b5f2bdd08b8bc5aa40a3.js  35.9 KiB  sessions_new  [emitted] [immutable]  sessions_new
+js/sessions_new-b5f2bdd08b8bc5aa40a3.js.map    36 KiB  sessions_new  [emitted] [dev]        sessions_new
+       js/users_new-6bfa82717f792c01e558.js  32.5 KiB     users_new  [emitted] [immutable]  users_new
+   js/users_new-6bfa82717f792c01e558.js.map  34.2 KiB     users_new  [emitted] [dev]        users_new
+                              manifest.json  1.01 KiB                [emitted]              
+Entrypoint application = js/application-94433b8ae2f91c3bc3ac.js js/application-94433b8ae2f91c3bc3ac.js.map
+Entrypoint sessions_new = js/sessions_new-b5f2bdd08b8bc5aa40a3.js js/sessions_new-b5f2bdd08b8bc5aa40a3.js.map
+Entrypoint users_new = js/users_new-6bfa82717f792c01e558.js js/users_new-6bfa82717f792c01e558.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/sessions_new.js] 6.17 KiB {sessions_new} [built]
+[./app/javascript/packs/users_new.js] 2.99 KiB {users_new} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 5 hidden modules
+
+  Rendered partials/_navbar.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 2386.8ms | Allocations: 4378)
+Completed 200 OK in 2393ms (Views: 2387.4ms | Allocations: 4792)
+
+
+Started GET "/pages/vendor/fontawesome-free/css/all.min.css" for ::1 at 2022-06-09 01:41:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/fontawesome-free/css/all.min.css"):
+  
+Started GET "/pages/css/estilo.css" for ::1 at 2022-06-09 01:41:25 -0500
+Started GET "/pages/vendor/jquery-easing/jquery.easing.min.js" for ::1 at 2022-06-09 01:41:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/css/estilo.css"):
+  
+Started GET "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2022-06-09 01:41:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+Started GET "/pages/js/alertas.js" for ::1 at 2022-06-09 01:41:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/alertas.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/jquery-easing/jquery.easing.min.js"):
+  
+Started GET "/pages/js/connection.js" for ::1 at 2022-06-09 01:41:26 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/connection.js"):
+  
+Started GET "/img/loader.gif" for ::1 at 2022-06-09 01:41:26 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/img/loader.gif"):
+  
+Started GET "/pages/contrato" for ::1 at 2022-06-09 01:41:38 -0500
+Processing by PagesController#contrato as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contrato.html within layouts/application
+  Rendered pages/contrato.html within layouts/application (Duration: 0.4ms | Allocations: 56)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.3ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.3ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.2ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.2ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | Allocations: 3156)
+Completed 200 OK in 33ms (Views: 31.4ms | Allocations: 3570)
+
+
+Started GET "/pages/vendor/fontawesome-free/css/all.min.css" for ::1 at 2022-06-09 01:41:38 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/fontawesome-free/css/all.min.css"):
+  
+Started GET "/pages/css/estilo.css" for ::1 at 2022-06-09 01:41:38 -0500
+Started GET "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2022-06-09 01:41:38 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+Started GET "/pages/vendor/jquery-easing/jquery.easing.min.js" for ::1 at 2022-06-09 01:41:38 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/jquery-easing/jquery.easing.min.js"):
+  
+Started GET "/pages/js/connection.js" for ::1 at 2022-06-09 01:41:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/css/estilo.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/connection.js"):
+  
+Started GET "/pages/js/alertas.js" for ::1 at 2022-06-09 01:41:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/alertas.js"):
+  
+Started GET "/img/loader.gif" for ::1 at 2022-06-09 01:41:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/img/loader.gif"):
+  
+Started GET "/pages/contrato" for ::1 at 2022-06-09 01:41:42 -0500
+Processing by PagesController#contrato as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contrato.html within layouts/application
+  Rendered pages/contrato.html within layouts/application (Duration: 0.2ms | Allocations: 56)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3156)
+Completed 200 OK in 9ms (Views: 8.4ms | Allocations: 3571)
+
+
+Started GET "/pages/vendor/fontawesome-free/css/all.min.css" for ::1 at 2022-06-09 01:41:42 -0500
+Started GET "/pages/css/estilo.css" for ::1 at 2022-06-09 01:41:42 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/css/estilo.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/fontawesome-free/css/all.min.css"):
+  
+Started GET "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2022-06-09 01:41:42 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+Started GET "/pages/js/alertas.js" for ::1 at 2022-06-09 01:41:42 -0500
+Started GET "/pages/js/connection.js" for ::1 at 2022-06-09 01:41:42 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/alertas.js"):
+  
+Started GET "/pages/vendor/jquery-easing/jquery.easing.min.js" for ::1 at 2022-06-09 01:41:42 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/connection.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/jquery-easing/jquery.easing.min.js"):
+  
+Started GET "/img/loader.gif" for ::1 at 2022-06-09 01:41:42 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/img/loader.gif"):
+  
+Started GET "/pages/contrato" for ::1 at 2022-06-09 01:41:44 -0500
+Processing by PagesController#contrato as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contrato.html within layouts/application
+  Rendered pages/contrato.html within layouts/application (Duration: 0.4ms | Allocations: 56)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.4ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.2ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 3156)
+Completed 200 OK in 21ms (Views: 19.1ms | Allocations: 3570)
+
+
+Started GET "/pages/vendor/fontawesome-free/css/all.min.css" for ::1 at 2022-06-09 01:41:45 -0500
+Started GET "/pages/css/estilo.css" for ::1 at 2022-06-09 01:41:45 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/css/estilo.css"):
+  
+Started GET "/pages/js/alertas.js" for ::1 at 2022-06-09 01:41:45 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/alertas.js"):
+  
+Started GET "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2022-06-09 01:41:45 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/fontawesome-free/css/all.min.css"):
+  
+Started GET "/pages/js/connection.js" for ::1 at 2022-06-09 01:41:45 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/connection.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+Started GET "/pages/vendor/jquery-easing/jquery.easing.min.js" for ::1 at 2022-06-09 01:41:45 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/jquery-easing/jquery.easing.min.js"):
+  
+Started GET "/img/loader.gif" for ::1 at 2022-06-09 01:41:45 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/img/loader.gif"):
+  
+Started GET "/img/loader.gif" for ::1 at 2022-06-09 01:41:51 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/img/loader.gif"):
+  
+Started GET "/pages/contrato" for ::1 at 2022-06-09 01:42:10 -0500
+Processing by PagesController#contrato as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contrato.html within layouts/application
+  Rendered pages/contrato.html within layouts/application (Duration: 0.1ms | Allocations: 56)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 3157)
+Completed 200 OK in 22ms (Views: 14.5ms | Allocations: 3574)
+
+
+Started GET "/pages/vendor/fontawesome-free/css/all.min.css" for ::1 at 2022-06-09 01:42:10 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/fontawesome-free/css/all.min.css"):
+  
+Started GET "/pages/css/estilo.css" for ::1 at 2022-06-09 01:42:10 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/css/estilo.css"):
+  
+Started GET "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2022-06-09 01:42:10 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+Started GET "/pages/js/alertas.js" for ::1 at 2022-06-09 01:42:10 -0500
+Started GET "/pages/vendor/jquery-easing/jquery.easing.min.js" for ::1 at 2022-06-09 01:42:10 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/alertas.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/jquery-easing/jquery.easing.min.js"):
+  
+Started GET "/pages/js/connection.js" for ::1 at 2022-06-09 01:42:10 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/connection.js"):
+  
+Started GET "/img/loader.gif" for ::1 at 2022-06-09 01:42:11 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/img/loader.gif"):
+  
+Started GET "/" for ::1 at 2022-06-09 01:43:18 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 62.4ms | Allocations: 10930)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.3ms | Allocations: 51)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 74.3ms | Allocations: 14094)
+Completed 200 OK in 82ms (Views: 74.8ms | ActiveRecord: 1.1ms | Allocations: 14536)
+
+
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 01:43:19 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/images/appstore.png" for ::1 at 2022-06-09 01:43:19 -0500
+Started GET "/images/android.png" for ::1 at 2022-06-09 01:43:19 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/android.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/appstore.png"):
+  
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 01:43:19 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/" for ::1 at 2022-06-09 01:44:31 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 10.7ms | Allocations: 2086)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.3ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 27.6ms | Allocations: 5196)
+Completed 200 OK in 34ms (Views: 24.5ms | ActiveRecord: 3.7ms | Allocations: 5637)
+
+
+Started GET "/pages/contrato" for ::1 at 2022-06-09 01:44:48 -0500
+Processing by PagesController#contrato as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contrato.html within layouts/application
+  Rendered pages/contrato.html within layouts/application (Duration: 0.1ms | Allocations: 57)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | Allocations: 3157)
+Completed 200 OK in 33ms (Views: 25.6ms | ActiveRecord: 0.0ms | Allocations: 3575)
+
+
+Started GET "/pages/vendor/fontawesome-free/css/all.min.css" for ::1 at 2022-06-09 01:44:48 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/fontawesome-free/css/all.min.css"):
+  
+Started GET "/pages/css/estilo.css" for ::1 at 2022-06-09 01:44:48 -0500
+Started GET "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2022-06-09 01:44:48 -0500
+Started GET "/pages/vendor/jquery-easing/jquery.easing.min.js" for ::1 at 2022-06-09 01:44:48 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/jquery-easing/jquery.easing.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/pages/css/estilo.css"):
+  
+Started GET "/pages/js/alertas.js" for ::1 at 2022-06-09 01:44:48 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/alertas.js"):
+  
+Started GET "/pages/js/connection.js" for ::1 at 2022-06-09 01:44:48 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/connection.js"):
+  
+Started GET "/img/loader.gif" for ::1 at 2022-06-09 01:44:49 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/img/loader.gif"):
+  
+Started GET "/pages/contrato" for ::1 at 2022-06-09 01:45:27 -0500
+Processing by PagesController#contrato as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contrato.html within layouts/application
+  Rendered pages/contrato.html within layouts/application (Duration: 0.8ms | Allocations: 156)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 1.2ms | Allocations: 305)
+  Rendered partials/_alerts.html.erb (Duration: 0.5ms | Allocations: 181)
+  Rendered partials/_footer.html.erb (Duration: 0.4ms | Allocations: 214)
+  Rendered partials/_ui-js.html.erb (Duration: 0.3ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 4807)
+Completed 200 OK in 26ms (Views: 20.6ms | ActiveRecord: 0.0ms | Allocations: 5651)
+
+
+Started GET "/pages/vendor/fontawesome-free/css/all.min.css" for ::1 at 2022-06-09 01:45:27 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/fontawesome-free/css/all.min.css"):
+  
+Started GET "/pages/css/estilo.css" for ::1 at 2022-06-09 01:45:27 -0500
+Started GET "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2022-06-09 01:45:27 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/pages/css/estilo.css"):
+  
+Started GET "/pages/vendor/jquery-easing/jquery.easing.min.js" for ::1 at 2022-06-09 01:45:27 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/jquery-easing/jquery.easing.min.js"):
+  
+Started GET "/pages/js/alertas.js" for ::1 at 2022-06-09 01:45:27 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/alertas.js"):
+  
+Started GET "/pages/js/connection.js" for ::1 at 2022-06-09 01:45:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/connection.js"):
+  
+Started GET "/img/loader.gif" for ::1 at 2022-06-09 01:45:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/img/loader.gif"):
+  
+Started GET "/pages/contrato" for ::1 at 2022-06-09 01:45:45 -0500
+Processing by PagesController#contrato as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contrato.html within layouts/application
+  Rendered pages/contrato.html within layouts/application (Duration: 1.5ms | Allocations: 156)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.8ms | Allocations: 305)
+  Rendered partials/_alerts.html.erb (Duration: 0.6ms | Allocations: 181)
+  Rendered partials/_footer.html.erb (Duration: 0.9ms | Allocations: 214)
+  Rendered partials/_ui-js.html.erb (Duration: 0.5ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 4808)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.0ms | Allocations: 5669)
+
+
+Started GET "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2022-06-09 01:45:46 -0500
+Started GET "/pages/vendor/jquery-easing/jquery.easing.min.js" for ::1 at 2022-06-09 01:45:46 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/pages/vendor/jquery-easing/jquery.easing.min.js"):
+  
+Started GET "/pages/js/alertas.js" for ::1 at 2022-06-09 01:45:46 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/alertas.js"):
+  
+Started GET "/pages/js/connection.js" for ::1 at 2022-06-09 01:45:46 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/connection.js"):
+  
+Started GET "/img/loader.gif" for ::1 at 2022-06-09 01:45:46 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/img/loader.gif"):
+  
+Started GET "/pages/contrato" for ::1 at 2022-06-09 01:46:07 -0500
+Processing by PagesController#contrato as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contrato.html within layouts/application
+  Rendered pages/contrato.html within layouts/application (Duration: 2.3ms | Allocations: 156)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.6ms | Allocations: 305)
+  Rendered partials/_alerts.html.erb (Duration: 0.4ms | Allocations: 181)
+  Rendered partials/_footer.html.erb (Duration: 0.4ms | Allocations: 214)
+  Rendered partials/_ui-js.html.erb (Duration: 0.3ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 4807)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 0.0ms | Allocations: 5668)
+
+
+Started GET "/pages/js/alertas.js" for ::1 at 2022-06-09 01:46:08 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/alertas.js"):
+  
+Started GET "/pages/js/connection.js" for ::1 at 2022-06-09 01:46:08 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/connection.js"):
+  
+Started GET "/img/loader.gif" for ::1 at 2022-06-09 01:46:08 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/img/loader.gif"):
+  
+Started GET "/img/loader.gif" for ::1 at 2022-06-09 01:46:10 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/img/loader.gif"):
+  
+Started GET "/pages/contrato" for ::1 at 2022-06-09 01:46:41 -0500
+Processing by PagesController#contrato as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contrato.html within layouts/application
+  Rendered pages/contrato.html within layouts/application (Duration: 0.7ms | Allocations: 156)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.8ms | Allocations: 305)
+  Rendered partials/_alerts.html.erb (Duration: 0.4ms | Allocations: 181)
+  Rendered partials/_footer.html.erb (Duration: 0.4ms | Allocations: 214)
+  Rendered partials/_ui-js.html.erb (Duration: 0.5ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 4807)
+Completed 200 OK in 39ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 5667)
+
+
+Started GET "/pages/js/connection.js" for ::1 at 2022-06-09 01:46:42 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/connection.js"):
+  
+Started GET "/img/loader.gif" for ::1 at 2022-06-09 01:46:42 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/img/loader.gif"):
+  
+Started GET "/pages/contrato" for ::1 at 2022-06-09 01:51:49 -0500
+Processing by PagesController#contrato as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contrato.html within layouts/application
+  Rendered pages/contrato.html within layouts/application (Duration: 0.4ms | Allocations: 56)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.4ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.2ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.2ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.2ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 34.0ms | Allocations: 3156)
+Completed 200 OK in 43ms (Views: 36.1ms | Allocations: 3586)
+
+
+Started GET "/pages/js/connection.js" for ::1 at 2022-06-09 01:51:49 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pages/js/connection.js"):
+  
+Started GET "/pages/contrato" for ::1 at 2022-06-09 01:52:20 -0500
+Processing by PagesController#contrato as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contrato.html within layouts/application
+  Rendered pages/contrato.html within layouts/application (Duration: 1.4ms | Allocations: 157)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 1.7ms | Allocations: 305)
+  Rendered partials/_alerts.html.erb (Duration: 2.1ms | Allocations: 181)
+  Rendered partials/_footer.html.erb (Duration: 1.2ms | Allocations: 214)
+  Rendered partials/_ui-js.html.erb (Duration: 1.2ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 36.6ms | Allocations: 4808)
+Completed 200 OK in 42ms (Views: 40.2ms | Allocations: 5643)
+
+
+Started GET "/" for ::1 at 2022-06-09 02:09:11 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 13.3ms | Allocations: 10814)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.6ms | Allocations: 316)
+  Rendered partials/_alerts.html.erb (Duration: 0.4ms | Allocations: 183)
+  Rendered partials/_footer.html.erb (Duration: 0.4ms | Allocations: 215)
+  Rendered partials/_ui-js.html.erb (Duration: 0.3ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 40.0ms | Allocations: 23603)
+Completed 200 OK in 48ms (Views: 41.1ms | ActiveRecord: 0.7ms | Allocations: 27300)
+
+
+Started GET "/" for ::1 at 2022-06-09 02:11:14 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 12.9ms | Allocations: 2210)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.2ms | Allocations: 51)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 5456)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.4ms | Allocations: 5990)
+
+
+Started GET "/" for ::1 at 2022-06-09 02:11:19 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2099)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.2ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 5212)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.2ms | Allocations: 5638)
+
+
+Started GET "/pages/contrato" for ::1 at 2022-06-09 02:11:34 -0500
+Processing by PagesController#contrato as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/contrato.html within layouts/application
+  Rendered pages/contrato.html within layouts/application (Duration: 0.9ms | Allocations: 137)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.2ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 3239)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 3659)
+
+
+Started GET "/" for ::1 at 2022-06-09 02:11:45 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2099)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 5209)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms | Allocations: 5631)
+
+
+Started POST "/logout" for ::1 at 2022-06-09 02:13:37 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 562)
+
+
+Started GET "/" for ::1 at 2022-06-09 02:13:37 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1141)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.1ms | Allocations: 51)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 56)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 4357)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.3ms | Allocations: 4827)
+
+
+Started GET "/login" for ::1 at 2022-06-09 02:13:40 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered sessions/new.html.erb within layouts/application (Duration: 32.9ms | Allocations: 4412)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.4ms | Allocations: 53)
+  Rendered partials/_alerts.html.erb (Duration: 0.2ms | Allocations: 53)
+  Rendered partials/_footer.html.erb (Duration: 0.3ms | Allocations: 50)
+  Rendered partials/_ui-js.html.erb (Duration: 0.3ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 55.6ms | Allocations: 7537)
+Completed 200 OK in 61ms (Views: 58.6ms | ActiveRecord: 0.5ms | Allocations: 8332)
+
+
+Started GET "/api/v1/users/0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2" for ::1 at 2022-06-09 02:13:55 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:30:in `show'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1396)
+
+
+Started POST "/login" for ::1 at 2022-06-09 02:14:01 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "eth_message"=>"Ethereum on Rails,1654758835381,b5561e78-553d-4a0c-9895-26fcb30168c5", "eth_address"=>"0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2", "eth_signature"=>"0x480416e0a31df9c750e669f835e41791c9f0539c4812aaa4cc5ca87f26180ee223257970f4cf11dce78dae9e6e97aef3a7a476252bf0ef9d16f7d39d922540201b"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."eth_address" = ? AND "users"."id" != ? LIMIT ?[0m  [["eth_address", "0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."eth_nonce" = ? AND "users"."id" != ? LIMIT ?[0m  [["eth_nonce", "4fc2ccea-5753-4d60-8957-0b809fac79cb"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "byson"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "eth_nonce" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["eth_nonce", "4fc2ccea-5753-4d60-8957-0b809fac79cb"], ["updated_at", "2022-06-09 07:14:01.571105"], ["id", 2]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 21ms (ActiveRecord: 4.6ms | Allocations: 7946)
+
+
+Started GET "/" for ::1 at 2022-06-09 02:14:01 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2102)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.1ms | Allocations: 51)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 56)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.0ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 5334)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.1ms | Allocations: 5790)
+
+
+Started POST "/logout" for ::1 at 2022-06-09 02:14:28 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 336)
+
+
+Started GET "/" for ::1 at 2022-06-09 02:14:28 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 2.1ms | Allocations: 943)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.2ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 56)
+  Rendered partials/_footer.html.erb (Duration: 0.3ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 4058)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.1ms | Allocations: 4487)
+
+
+Started GET "/login" for ::1 at 2022-06-09 02:14:30 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered sessions/new.html.erb within layouts/application (Duration: 12.4ms | Allocations: 3374)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.2ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.2ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 6424)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.1ms | Allocations: 6848)
+
+
+Started GET "/api/v1/users/0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2" for ::1 at 2022-06-09 02:14:31 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:30:in `show'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 838)
+
+
+Started GET "/login" for ::1 at 2022-06-09 02:15:06 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/jsagudelo/codigo/blockchain/web3-ruby-zafiroapp/public/packs
+[Webpacker] warning package.json: "dependencies" has dependency "dotenv" with range "^8.2.0" that collides with a dependency in "devDependencies" of the same name with version "^10.0.0"
+
+[Webpacker] Hash: 2e24949457bda537526c
+Version: webpack 4.46.0
+Time: 842ms
+Built at: 09/06/2022 2:15:08 a. m.
+                                      Asset      Size        Chunks                         Chunk Names
+     js/application-94433b8ae2f91c3bc3ac.js   122 KiB   application  [emitted] [immutable]  application
+ js/application-94433b8ae2f91c3bc3ac.js.map   136 KiB   application  [emitted] [dev]        application
+    js/sessions_new-67957c08a23b4ee6e568.js  35.9 KiB  sessions_new  [emitted] [immutable]  sessions_new
+js/sessions_new-67957c08a23b4ee6e568.js.map    36 KiB  sessions_new  [emitted] [dev]        sessions_new
+       js/users_new-6bfa82717f792c01e558.js  32.5 KiB     users_new  [emitted] [immutable]  users_new
+   js/users_new-6bfa82717f792c01e558.js.map  34.2 KiB     users_new  [emitted] [dev]        users_new
+                              manifest.json  1.01 KiB                [emitted]              
+Entrypoint application = js/application-94433b8ae2f91c3bc3ac.js js/application-94433b8ae2f91c3bc3ac.js.map
+Entrypoint sessions_new = js/sessions_new-67957c08a23b4ee6e568.js js/sessions_new-67957c08a23b4ee6e568.js.map
+Entrypoint users_new = js/users_new-6bfa82717f792c01e558.js js/users_new-6bfa82717f792c01e558.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/sessions_new.js] 6.19 KiB {sessions_new} [built]
+[./app/javascript/packs/users_new.js] 2.99 KiB {users_new} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 5 hidden modules
+
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2357.7ms | Allocations: 4033)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.2ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 53)
+  Rendered partials/_ui-js.html.erb (Duration: 0.0ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 2362.3ms | Allocations: 7013)
+Completed 200 OK in 2365ms (Views: 2363.4ms | ActiveRecord: 0.4ms | Allocations: 7433)
+
+
+Started GET "/api/v1/users/0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2" for ::1 at 2022-06-09 02:15:09 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:30:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 838)
+
+
+Started GET "/login" for ::1 at 2022-06-09 02:16:01 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/jsagudelo/codigo/blockchain/web3-ruby-zafiroapp/public/packs
+[Webpacker] warning package.json: "dependencies" has dependency "dotenv" with range "^8.2.0" that collides with a dependency in "devDependencies" of the same name with version "^10.0.0"
+
+[Webpacker] Hash: f736b1943a576e668f8d
+Version: webpack 4.46.0
+Time: 790ms
+Built at: 09/06/2022 2:16:03 a. m.
+                                      Asset      Size        Chunks                         Chunk Names
+     js/application-94433b8ae2f91c3bc3ac.js   122 KiB   application  [emitted] [immutable]  application
+ js/application-94433b8ae2f91c3bc3ac.js.map   136 KiB   application  [emitted] [dev]        application
+    js/sessions_new-f994439122fef01ad738.js  35.9 KiB  sessions_new  [emitted] [immutable]  sessions_new
+js/sessions_new-f994439122fef01ad738.js.map    36 KiB  sessions_new  [emitted] [dev]        sessions_new
+       js/users_new-6bfa82717f792c01e558.js  32.5 KiB     users_new  [emitted] [immutable]  users_new
+   js/users_new-6bfa82717f792c01e558.js.map  34.2 KiB     users_new  [emitted] [dev]        users_new
+                              manifest.json  1.01 KiB                [emitted]              
+Entrypoint application = js/application-94433b8ae2f91c3bc3ac.js js/application-94433b8ae2f91c3bc3ac.js.map
+Entrypoint sessions_new = js/sessions_new-f994439122fef01ad738.js js/sessions_new-f994439122fef01ad738.js.map
+Entrypoint users_new = js/users_new-6bfa82717f792c01e558.js js/users_new-6bfa82717f792c01e558.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/sessions_new.js] 6.19 KiB {sessions_new} [built]
+[./app/javascript/packs/users_new.js] 2.99 KiB {users_new} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 5 hidden modules
+
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1914.5ms | Allocations: 3929)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.2ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 1918.6ms | Allocations: 6905)
+Completed 200 OK in 1921ms (Views: 1919.3ms | ActiveRecord: 0.2ms | Allocations: 7325)
+
+
+Started GET "/api/v1/users/0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2" for ::1 at 2022-06-09 02:16:08 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:30:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 835)
+
+
+Started GET "/login" for ::1 at 2022-06-09 02:16:21 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered sessions/new.html.erb within layouts/application (Duration: 14.6ms | Allocations: 2690)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 22.5ms | Allocations: 5648)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.2ms | Allocations: 6068)
+
+
+Started GET "/login" for ::1 at 2022-06-09 02:18:13 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/jsagudelo/codigo/blockchain/web3-ruby-zafiroapp/public/packs
+[Webpacker] warning package.json: "dependencies" has dependency "dotenv" with range "^8.2.0" that collides with a dependency in "devDependencies" of the same name with version "^10.0.0"
+
+[Webpacker] Hash: 675f08380bd568f3cecb
+Version: webpack 4.46.0
+Time: 777ms
+Built at: 09/06/2022 2:18:14 a. m.
+                                      Asset      Size        Chunks                         Chunk Names
+     js/application-94433b8ae2f91c3bc3ac.js   122 KiB   application  [emitted] [immutable]  application
+ js/application-94433b8ae2f91c3bc3ac.js.map   136 KiB   application  [emitted] [dev]        application
+    js/sessions_new-1b325883da8e5d15f9b8.js  35.9 KiB  sessions_new  [emitted] [immutable]  sessions_new
+js/sessions_new-1b325883da8e5d15f9b8.js.map    36 KiB  sessions_new  [emitted] [dev]        sessions_new
+       js/users_new-6bfa82717f792c01e558.js  32.5 KiB     users_new  [emitted] [immutable]  users_new
+   js/users_new-6bfa82717f792c01e558.js.map  34.2 KiB     users_new  [emitted] [dev]        users_new
+                              manifest.json  1.01 KiB                [emitted]              
+Entrypoint application = js/application-94433b8ae2f91c3bc3ac.js js/application-94433b8ae2f91c3bc3ac.js.map
+Entrypoint sessions_new = js/sessions_new-1b325883da8e5d15f9b8.js js/sessions_new-1b325883da8e5d15f9b8.js.map
+Entrypoint users_new = js/users_new-6bfa82717f792c01e558.js js/users_new-6bfa82717f792c01e558.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/sessions_new.js] 6.2 KiB {sessions_new} [built]
+[./app/javascript/packs/users_new.js] 2.99 KiB {users_new} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 5 hidden modules
+
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1852.2ms | Allocations: 6852)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.3ms | Allocations: 305)
+  Rendered partials/_alerts.html.erb (Duration: 0.6ms | Allocations: 181)
+  Rendered partials/_footer.html.erb (Duration: 0.2ms | Allocations: 214)
+  Rendered partials/_ui-js.html.erb (Duration: 0.3ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 1858.6ms | Allocations: 11314)
+Completed 200 OK in 1861ms (Views: 1859.7ms | ActiveRecord: 0.6ms | Allocations: 12396)
+
+
+Started GET "/login" for ::1 at 2022-06-09 02:18:49 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered sessions/new.html.erb within layouts/application (Duration: 14.3ms | Allocations: 3401)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.8ms | Allocations: 305)
+  Rendered partials/_alerts.html.erb (Duration: 0.4ms | Allocations: 181)
+  Rendered partials/_footer.html.erb (Duration: 0.3ms | Allocations: 214)
+  Rendered partials/_ui-js.html.erb (Duration: 0.3ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 24.9ms | Allocations: 7808)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.3ms | Allocations: 8815)
+
+
+Started GET "/login" for ::1 at 2022-06-09 02:18:57 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered sessions/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 2690)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 5648)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.1ms | Allocations: 6116)
+
+
+Started GET "/login" for ::1 at 2022-06-09 02:19:06 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered sessions/new.html.erb within layouts/application (Duration: 14.2ms | Allocations: 2692)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 5668)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.2ms | Allocations: 6089)
+
+
+Started GET "/" for ::1 at 2022-06-09 02:19:11 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2041)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.2ms | Allocations: 53)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 53)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 5340)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.1ms | Allocations: 6217)
+
+
+Started GET "/" for ::1 at 2022-06-09 02:20:44 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2040)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.5ms | Allocations: 306)
+  Rendered partials/_alerts.html.erb (Duration: 0.3ms | Allocations: 181)
+  Rendered partials/_footer.html.erb (Duration: 0.3ms | Allocations: 214)
+  Rendered partials/_ui-js.html.erb (Duration: 0.4ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | Allocations: 13129)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.2ms | Allocations: 14149)
+
+
+Started GET "/" for ::1 at 2022-06-09 02:20:55 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 4.6ms | Allocations: 942)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 34.6ms | Allocations: 9434)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.2ms | Allocations: 9902)
+
+

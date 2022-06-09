@@ -24,7 +24,7 @@ if (typeof window.ethereum !== 'undefined') {
     // sign a message with current time and nonce from database
     const nonce = await getUuidByAccount(etherbase);
     if (nonce) {
-      const customTitle = "Ethereum on Rails";
+      const customTitle = "Autenticacion Zafiro app salud";
       const requestTime = new Date().getTime();
       const message = customTitle + "," + requestTime + "," + nonce;
       const signature = await personalSign(etherbase, message);
@@ -37,12 +37,12 @@ if (typeof window.ethereum !== 'undefined') {
     } else {
 
       // should have some error handling here
-      formInputEthMessage.value = "Please sign up first!";
+      formInputEthMessage.value = "Primero resgistrate!";
     }
   });
 } else {
   // disable form submission in case there is no ethereum wallet available
-  buttonEthConnect.innerHTML = "No Ethereum Context Available";
+  buttonEthConnect.innerHTML = "No se tiene una wallet de CELO conectada";
   buttonEthConnect.disabled = true;
 }
 

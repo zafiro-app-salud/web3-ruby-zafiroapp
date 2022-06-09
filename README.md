@@ -1,5 +1,12 @@
 # README
 
+<!-- como correr la app por primera vez -->
+
+1. npm install
+
+
+
+<!-- inicio default -->
 Ethereum on Rails MVP: allow sign-up and log-in with Ethereum wallet (e.g., MetaMask browser extension).
 
 [![volkswagen status](https://auchenberg.github.io/volkswagen/volkswargen_ci.svg?v=1)](https://github.com/auchenberg/volkswagen)

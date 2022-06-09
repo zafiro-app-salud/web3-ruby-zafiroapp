@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
   # ethereum authentication demo
-  root "pages#demo"
+  root "pages#landing"
+  get 'pages/contrato'
+  get 'users/profile'
 
   # authentication logic routes
   get "signup", to: "users#new"

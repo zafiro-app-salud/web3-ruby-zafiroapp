@@ -1,0 +1,85 @@
+
+             <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <div class="col-lg-12" id="metamask_message">
+                        <br>
+                        <h2>Porfavor Conecte su billetera para poder realizar el proceso de autenticación.</h2>
+                        <br>
+                        <a onclick="wallet_info()" class="btn centered-element"><i class="fas fa-info-circle"></i> ver mas información</a>
+                        <br>
+                        <br>
+                        <a id="connectButton" class="btn btn-primary btn-user btn-block">
+                            Conectar Wallet
+                        </a> 
+                        <br>
+                        <br>   
+                        <div style="display:none">
+                        <a id="connectButtonNav" class="btn btn-primary btn-user btn-block">
+                            Connectar Wallet
+                        </a>  
+                        </div>
+                    </div>
+                    <div id="web3_container" style="display: none;">
+
+                        <!-- Page Heading -->
+                        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                            <h1 class="h3 mb-0 text-gray-800">Consultar</h1>
+                            <br>
+                            <br>
+                            <a id="showAccount" onclick="copy_address()" class="btn address btn-primary shadow-sm"><i
+                                    class="fas fa-download fa-sm text-white-50"></i> Address</a>
+                                    <br>
+                        </div>
+
+                        <div class="row">
+                            <!-- Earnings (Monthly) Card Example -->
+                            <div class="col-12">
+                                <div class="card border-left-primary shadow h-100 py-2">
+                                    <div class="card-body">
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col mr-2">
+                                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                    Variable de Prueba</div>
+                                                <div id="message" class="h5 mb-0 font-weight-bold text-gray-800">-</div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Registrar Web3</h1>
+                                    </div>
+                                    <form class="user">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-control-user" id="exampleInput"
+                                                placeholder="Mensaje de Prueba">
+                                        </div>
+                                        <hr>
+                                        <a id="registerButton" class="btn btn-primary btn-user btn-block">
+                                            Firmar Mensaje
+                                        </a>    
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    <!-- Page level custom scripts -->
+    <script src="https://unpkg.com/sweetalert2@7.8.2/dist/sweetalert2.all.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/alertas.js"></script>
+    <script type="module" src="/js/connection.js"></script>
+    <script type="module" src="/js/wallet_connect.js"></script>
+    <script type="module" src="/js/contract_read.js"></script>
+    <script type="module" src="/js/contract_write.js"></script>
+
