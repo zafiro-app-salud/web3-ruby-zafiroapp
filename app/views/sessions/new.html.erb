@@ -1,0 +1,33 @@
+<h1>Ethereum Log-In</h1>
+<p>
+  <em>
+    Connect to an Ethereum wallet, retrieve the user's account,
+    generate a message containing the request time and the user's specific
+    nonce, and let them sign this message with the Ethereum account they
+    control. If the signature is not expired and matches the Ethereum address
+    and nonce in the database, assume the user cryptographically authenticated.
+  </em>
+</p>
+<p>
+  <% if !logged_in? %>
+    <%= form_tag "/login", class: "new_session" do %>
+      <%= text_field_tag :eth_message, "", readonly: true, class: "eth_message" %> <br />
+      <%= text_field_tag :eth_address, "", readonly: true, class: "eth_address" %> <br />
+      <%= text_field_tag :eth_signature, "", readonly: true, class: "eth_signature" %> <br />
+    <% end %>
+    <button class="eth_connect">Log-in with Ethereum</button>
+    <br /><br />... or
+    <%= link_to "sign up", signup_path %>
+    instead? or
+    <%= link_to "go back", root_path %>?
+  <% else %>
+    Hello
+    <code><%= current_user.eth_address %></code>!
+    Do you wish to
+    <%= link_to "log out", logout_path, method: :destroy %>
+    or
+    <%= link_to "go back", root_path %>?
+  <% end %>
+</p>
+
+<%= javascript_pack_tag "sessions_new" %>

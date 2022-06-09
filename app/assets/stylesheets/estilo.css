@@ -1,0 +1,1185 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Raleway:300,400,500,600,600i,700,900&display=swap");
+  
+  
+/* reglas generales */
+body {
+    font-family: 'Lato', sans-serif !important;
+    font-weight: normal;
+    font-style: normal;
+    color: #8C96A7;
+    background: #f3e3f8;
+    overflow-x: hidden;
+  }
+  
+  * {
+    font-family: 'Lato', sans-serif !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  a {
+    color: #00CFFF !important;
+    text-decoration: none;
+  }
+  h1 ,h2, h3, h4, h5{
+    font-family: 'Quantico', sans-serif ;
+  }
+  h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  color: #393E46;  
+  margin: 0px;
+}
+h1 {
+    font-size: 48px;
+  }
+  
+  h2 {
+    font-size: 45px;
+  }
+  
+  h3 {
+    font-size: 28px;
+  }
+  
+  h4 {
+    font-size: 25px;
+  }
+  
+  h5 {
+    font-size: 20px;
+  }
+  
+  h6 {
+    font-size: 16px;
+  }
+
+  ul, ol {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+  }
+.derecha{
+  float: right;
+}
+
+/* fin reglas generales */
+
+/* inicio nueva pagina css */
+  .parteInicial{
+    max-width: 10%;
+  }
+  .contenidoPrincipal{
+    max-width: 90%;
+    margin-left: 10%;
+  }
+
+  .fondoInicial{      
+    height: 750px;
+    margin-top: -10%;
+    
+  }
+  .animadoFondo{
+    width: 100%;
+    height: 100%;
+    background: url(/images/fondo-zafiro.png);
+    background-size:contain ;
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+  .animadoFondo:hover{
+    width: 100%;
+    height: 100%;
+    background: url(/images/medico-fon.png);  
+    background-size:contain ;
+    background-repeat: no-repeat;
+    background-position: left;  
+  }
+  .botonNuevaPagina{
+    border: solid #590776 2px !important;
+    background: transparent;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #444;  
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;  
+    padding: 0.395rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 20px !important;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  .botonNuevaPagina2{
+    width: 150px;
+    border: solid #590776 2px !important;
+    background: transparent;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #444;  
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;  
+    padding: 0.395rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 20px !important;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .botonrellenoMOrado{
+    width: 150px;    
+    background: #590776;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.5;
+    color: rgb(255, 255, 255);  
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+    padding: 0.395rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 20px !important;
+    
+  }
+  .nav-item{
+    margin-left: 2%;
+    width: 100px;
+
+  }
+
+  .cartaNewLeft{
+    width: 100%;
+    height: 300px;  
+  }
+  .cartaNewDerecha{
+    width: 100%;
+    height: 300px;  
+  }
+  /* lined rectangle */
+  .cartaSobreDerecha {
+    width: 100%;
+    height: 100%;
+    background: url(/images/tarjeta-usuario.png);  
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+  .cartaSobreIzquierda {
+    width: 100%;
+    height: 100%;
+    background: url(/images/tarjeta-medico.png);  
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+    .textoInterno{
+      width: 60%;
+      margin-top: 15%;
+      margin-left: 20%;
+    }
+  
+    .cartaSlider{
+      /* Auto layout */      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 24px;      
+      width: 100%;
+      height: 179px;      
+      background: #FFFFFF;
+      border: 1px solid #00CFFF;
+      box-sizing: border-box;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+      border-radius: 20px;
+      margin-left: 3%;
+    }
+    .imagenEspecialidad{      
+      width: 150px;
+      height: 150px;
+      margin-top: -50%;
+      border-radius: 100%;
+      background: #FFFFFF;
+      border: 1px solid #00CFFF;
+      padding: 25%;      
+    }
+    .listadoCartas{
+      display: inline-flex;
+      margin-top: 5%;
+    }
+    .subtitular{      
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 25px;
+      line-height: 120%;
+      color: #7D7987;
+    }
+    .theme-btn{
+      border-radius: 30px !important;
+      margin-top: 3px !important;
+      padding: 5px 35px 5px 35px !important;
+    }
+    .btn-secundario{
+      display: inline-block;
+      font-weight: 600;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      padding: 5px 35px 5px 35px !important;
+      font-size: 18px;
+      border-radius: 30px;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      z-index: 5;
+      -webkit-transition: all 0.3s ease-out 0s;
+      transition: all 0.3s ease-out 0s;
+      background-color: #00cfff;
+    }
+    .btn-secundario:hover{
+      display: inline-block;
+      font-weight: 600;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      padding: 5px 35px 5px 35px !important;
+      font-size: 18px;
+      border-radius: 30px;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      z-index: 5;
+      -webkit-transition: all 0.3s ease-out 0s;
+      transition: all 0.3s ease-out 0s;
+      background-color: #590776;
+    }
+  .moradoBorde{  
+    width: 100%;
+    height: 658px;
+    left: 149px;  
+    background: #590776;
+    border-radius: 41px;
+    display: inline-flex;
+  }
+  .izquierdo{
+    float: left;
+  }
+  .videoImagen{
+    width: 90%;
+    margin-top: 10%;
+    margin-left: 1%;
+  }
+  .leftSpace{
+    padding: 1%;
+    text-align: start;
+    margin-left: -1%;
+    margin-top: 10%;
+  }
+  .textoBlanco{
+    color: whitesmoke !important;
+  }
+  .botonBlancoPagina{
+    border: solid #ffffff 2px !important;
+    background: transparent;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.5;
+    color: rgb(255, 255, 255);  
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;  
+    padding: 0.395rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 20px !important;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; 
+  }
+
+  .fijo{
+    position: fixed !important;
+    height: 100%;
+  }
+
+  .margenIzquierda{
+    margin-left: 19%;
+  }
+
+  .Mizquierda{
+    width: 10%;
+    top: 0;
+    left: 0;
+    background: #FFFFFF;
+    position: absolute;
+    margin-left: -2px;
+    
+  }
+  
+  .iconoInicio {
+    width: 40px;
+    height: 40px;
+    margin-top: 5%;
+}
+  .center{
+    text-align: center;
+    margin: auto;
+  }
+
+  nav.main-navigation ul.nav-list {
+    text-align: center !important;
+    margin: auto !important;
+  }
+
+
+  
+  nav.main-navigation ul.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+
+@keyframes FadeIn {
+    0% {
+        opacity: 0;
+        -webkit-transition-duration: 0.8s;
+        transition-duration: 0.8s;
+        -webkit-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        pointer-events: auto;
+        transition: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+
+.nav-list li {
+    animation: FadeIn 1s cubic-bezier(0.65, 0.05, 0.36, 1);
+    animation-fill-mode: both;
+}
+
+.nav-list li:nth-child(1) {
+    animation-delay: .3s;
+}
+
+.nav-list li:nth-child(2) {
+    animation-delay: .6s;
+}
+
+.nav-list li:nth-child(3) {
+    animation-delay: .9s;
+}
+
+.nav-list li:nth-child(4) {
+    animation-delay: 1.2s;
+}
+
+.nav-list li:nth-child(5) {
+    animation-delay: 1.5s;
+}
+
+/* Animation */
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 40px, 0)
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 40px, 0)
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+
+.rigth {
+  text-align: end;
+  /* float: right; */
+}
+.listaBotonoes{
+  display: inline-flex;
+}
+
+.listaBotonoes li{
+  margin-top: 1%;
+  margin-left: 5%;
+}
+  
+/* fin nueva pagina css */
+
+/* inicio foro medico */
+
+.avatario{
+  width: 50px;
+  height: 50px;
+}
+
+/* fin foro medico */
+
+/* inicio sidebar */
+
+.wrapper{
+  width: 100%;
+  height: 100%;
+}
+
+.top_navbar{
+  background: #f3e3f8;
+  height: 60px;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 50;
+}
+
+.top_navbar .hamburger{
+  width: 80px;
+  background: #ffffff;
+  position: relative;
+  font-size: 28px;
+}
+
+.top_navbar .hamburger .hamburger__inner{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+  width: 40px;
+  height: 20px;
+}
+
+.top_navbar .hamburger__inner > div{
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.top_navbar .hamburger div.two{
+  top: 10px;
+  width: 40px;
+}
+
+.top_navbar .hamburger div.three{
+  top: 20px;
+}
+
+.top_navbar .menu{
+  width: calc(100% - 80px);
+  height: 100%;
+  display: block !important;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.top_navbar .menu .logo{
+  color: #004D40;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.top_navbar .menu .right_menu ul{
+  display: flex;
+}
+
+.top_navbar .menu .right_menu ul li{
+  position: relative;
+}
+
+.top_navbar .menu .right_menu ul li .fas{
+  font-size: 22px;
+  cursor: pointer;
+  color: #004D40;
+}
+
+.top_navbar .menu .right_menu ul li .profile_dd{
+  position: absolute;
+  top: 35px;
+  right: -10px;
+  background: #fff;
+  box-shadow: 0 0 2px rgba(0,0,0,0.5);
+  padding: 10px 0;
+  width: 180px;
+  border-radius: 3px;
+  display: none;
+  user-select: none;
+}
+
+.top_navbar .menu .right_menu ul li .profile_dd.active{
+  display: block;
+}
+
+.top_navbar .menu .right_menu ul li .profile_dd .dd_item{
+  padding: 10px;
+  cursor: pointer;
+  color: #004D40;
+}
+
+.top_navbar .menu .right_menu ul li .profile_dd .dd_item:hover{
+  background: #E0F2F1;
+}
+
+.top_navbar .menu .right_menu ul li .profile_dd:before{
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  border: 10px solid;
+  border-color: transparent transparent #fff transparent;
+}
+
+.main_container .sidebar{
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 80px;
+  height: 100%;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.main_container .sidebar .sidebar__inner{
+  position: relative;
+}
+
+.main_container .sidebar .profile{
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding: 20px 0;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.main_container .sidebar .profile .img{
+  padding: 0 18px;
+}
+
+.main_container .sidebar .profile img{
+   width: 45px;
+}
+
+.main_container .sidebar .profile p:first-child{
+  font-size: 14px;
+  color: #80CBC4;
+  margin-bottom: 3px;
+}
+
+.main_container .container{
+  margin-top: 60px;
+  width: calc(100% - 225px);
+  margin-left: 225px;  
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.main_container .sidebar ul li a{
+  color: #fff;
+  font-size: 18px;
+  padding: 20px 30px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1px;
+  transition: all 0.3s ease;
+}
+
+.main_container .sidebar ul li a .icon{
+  margin-right: 15px;
+  font-size: 28px;
+}
+
+.main_container .sidebar ul li a span{
+  display: none;
+}
+.main_container .sidebar ul li a{
+  color: #7E8EA7 !important;
+}
+
+.main_container .sidebar ul li a:hover,
+.main_container .sidebar ul li a.active{
+  background: #590776;
+  text-decoration: none;
+  color: white !important;  
+}
+
+
+.main_container .container .item{
+  background: #fff;
+  border: 1px solid #E0F2F1;
+  margin-bottom: 30px;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 22px;
+}
+/* after adding active class */
+.wrapper.active .sidebar{
+  width: 225px;
+}
+
+.wrapper.active .sidebar ul li a span.tituloSide,
+.wrapper.active .profile_info
+{
+  display: inline-block;
+}
+
+
+.wrapper.active .main_container .container{
+  width: calc(100% - 225px);
+  margin-left: 225px;
+}
+
+.left {
+  left: 8%;
+  text-align: left;
+  float: left !important;
+  position: absolute;
+}
+
+
+/* fin sidebar */
+
+
+/* fin slider-home */
+.box {
+  width: 227px;
+  height: 300px;
+  
+}  
+.box a {
+  color: #461e52;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 30% 30px 0 30px;
+  text-align: center;
+  transition: none;
+  line-height: 1;  
+}
+.box:hover a{ 
+ text-decoration:none;
+}
+.mission-next-arrow {
+  position: absolute;
+  background: url(https://raw.githubusercontent.com/solodev/icon-box-slider/master/nextarrow2.png) no-repeat center;
+  background-size: contain;
+  top: 60%;
+  transform: translateY(-50%);
+  right: -36px;
+  height: 30px;
+  width: 20px;
+  border:none;
+}
+.mission-next-arrow:hover {
+  cursor: pointer;	
+}
+.mission-prev-arrow {
+  background: url(https://raw.githubusercontent.com/solodev/icon-box-slider/master/prevarrow2.png) no-repeat center;
+  background-size: contain;
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  left: -36px;
+  height: 30px;
+  width: 20px;
+  border:none;
+} 
+.mission-prev-arrow:hover {
+  cursor: pointer;	
+}
+.box a.more-links {  
+  padding: 70px 110px 0 20px;
+  background: #a89269 url(https://raw.githubusercontent.com/solodev/icon-box-slider/master/rightarrow.png) no-repeat 155px 170px;
+}
+
+.carusel{
+  margin-top: 3% !important;
+  height: 250px !important;
+  margin-left: 1%;
+}
+
+/* fin slider-home */
+/* inicio menu navbar */
+
+.navbar{
+  background: #f3e3f8;  
+}
+.tituloSide{
+  color: #0000008c;
+}
+.tituloSide:hover{
+  color: #f3e3f8;
+}
+.wrapper.active .tituloSide{
+  margin-left: 5%;
+  font-weight: bold;
+}
+.sideCajon{
+  width: 10% !important;
+
+}
+.inicioCajon{
+ width: 90% !important;
+}
+.logitoZaf{
+  margin-top: -50%;
+
+}
+.navbar-light .navbar-nav .nav-link { 
+  background: white !important;
+  border-radius: 25px !important;
+}
+
+
+/* fin menu navbar */
+
+/* preguntas frecuentes  */
+.accordion-button {
+  background: #590776 !important;
+  color: #ffffff !important;
+  border-radius: 25px !important;
+  }
+  
+  .accordion-item {
+    background-color: #f3e3f8 !important;
+    border: 1px solid  #f3e3f8 !important;
+}
+.accordion{
+  margin-top: 15% !important;
+}
+
+
+  /* preguntas frecuentes */
+  /* foto slide equipo */
+  .fondoEquipo{
+    max-width: 100%;
+    height: 350px;
+  }
+  .equipo{
+    max-width: 100%;
+  }
+
+  .equipoFoto{
+    margin-top: -35%;
+  } 
+  .cartaSlider2{
+    /* Auto layout */      
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    width: 100%;
+    height: 179px;              
+    box-sizing: border-box;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    margin-left: 3%;
+  }
+  .fotoEquipo{        
+    width: 150px;
+    height: 170px;
+    margin-top: -50%;
+    border-radius: 5%;
+    background: #FFFFFF;
+        
+  }
+  .subtitular2{      
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    margin-top: 10px;
+    line-height: 100%;
+    color: #ffffff;
+  }
+  
+  
+  
+  /* foto slide equipo */
+
+
+  /* inicio notocia */
+
+
+  .izquierdFuente{
+    text-align: left;
+  }
+  .tituloOscuro{
+    color:  #000000;
+    font-weight: bold;
+    text-align: initial !important;
+  }
+  
+/* fin notocia */
+
+/* inicio contactanos */
+
+  .cartaHubspot {
+    border-radius: 25px;
+    margin-left: -110%;
+    padding: 5%;
+    background: #59077680;
+    z-index: 1000;
+    width: 120%;
+}
+  .fotoContactanos {
+    z-index: 10;
+    margin-left: 10%;
+}
+.listaContacto{
+  display: inline-flex;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.5em;
+
+}
+  /* fin contactanos */
+
+  /* inicio appstore */
+  .celular{
+    margin-top: -25%;
+    margin-left: -25%;
+  }
+  .fondoMorado{
+    width: 100%;    
+    background: url(/images/fondo.png);
+    background-size:contain ;
+    background-repeat: no-repeat;
+
+
+  }
+  .listaDescarga{
+    display: inline-flex;
+    width: 100%;
+    margin-left: 10%;
+
+  }
+  .listaDescarga li{
+    margin-top: 2%;
+    margin-left: 2%;
+  }
+  .androide{
+    margin-top: -6%;
+  }
+
+    /* fin appstore */
+
+    /* inicio footer */
+
+    .piedepagina{
+      width: 100%;
+      margin-top: 10%;
+      background: #590776;
+    }
+    .fondoAzul{
+      background: #00cfff;
+      height: 200px;
+    }
+    .cajonesFooter {
+      margin-top: 1%;
+      text-align: left;
+      color: white;
+    }
+    .cajonesFooter h5 {
+      color: white;
+    }
+    .contenedorFooter{
+      padding: 4%;
+    }
+    .apoyos{
+      width: 100%;
+      margin: auto;
+    }
+
+
+    /* fin footer */
+
+
+  /* inicio foro tabs */
+.card-header{
+  background: white !important;
+}
+.espacioList{
+  margin-left: 10%;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  text-align: center !important;
+  color: #495057;
+  background-color: #fff;
+  border-color: #dee2e6 #dee2e6 #fff;
+  border-bottom: solid #590776 2px;
+  font-weight: bold;
+  width: 150px;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs {
+  text-align: center !important;
+  color: #495057 !important;
+  background-color: #fff;
+  font-weight: bold;
+}
+.nav-tabs .nav-link {
+  color: black !important;
+}
+.bg-body {
+  background-color: #f3e3f8!important;
+}
+.card-header {
+  height: 65px;
+  border-radius: 10px !important;
+}
+.foroIndex{
+  padding: 2%;
+  border-radius: 24px;
+}
+   
+.categoriaArticulo{     
+  text-align: end;
+  color: #7E8EA7;
+}
+
+  /* fin foro tabs */
+
+ /* inicio foro index */
+ .portadaBlogIndex{
+  width: 100% !important;  
+  max-height: 800px;
+  margin: auto;
+}
+.w-100 {
+  width: 100%!important;
+  height: 470px;
+}
+.publicidad{
+  border-radius: 24px !important;
+}
+.lineaInferior{
+  padding-bottom: 20px;
+  margin-top: 5px;
+  border-bottom: solid 1px #7E8EA7;
+}
+.avatarnn {
+  width: 50px;
+  height: 50px;
+  margin-left: -6%; 
+}
+.listadoUl{
+  display: inline-flex;
+}
+.tituloLink{
+  color: black !important;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 56px;
+  text-decoration: none;
+  
+}
+.iconoEdit{
+  margin-top: 50%;
+  width: 40px;
+}
+.lineaBottom{
+  padding-bottom: 5px;
+  border-bottom: solid 1px #7E8EA7;
+
+}
+.numeritoBlog3 {
+  width: 30px;
+  z-index: 49;
+  margin-left: -2%;
+  margin-top: -2%;
+  position: absolute;
+  font-weight: bold;
+  font-size: 1.1em;
+  background: #590776;
+  color: white;
+  border-radius: 100%;
+  padding: 1px;
+}
+.listadoUl{
+  display: inline-flex;
+}
+.espaciadoLista{
+  margin-left: 50px;
+}
+.formNewForo{
+  height: 250px;
+  background: white;
+  border-radius: 25px;
+  width: 96%;
+  margin: auto;
+  
+}
+.triggerModal{
+  
+  width: 99%;
+  margin: auto;
+}
+.morado{
+  background: #590776;
+}
+.sinFondo{
+  background: transparent;
+  border: none;
+}
+
+.sombras{
+  box-shadow:5px 5px 10px;
+}
+
+
+ /* fin foro index  */
+
+/* login views */
+
+.barraInteriro{
+  height: 605px;
+  z-index: 30;
+}
+.cartaNewUser{
+  padding: 5% !important;
+  margin-left: -5%;
+  height: 598px;
+  z-index: 20;
+  border-radius: 1px 25px 25px 1px;
+  background: white;
+}
+.labeles{
+  border-radius: 15px;
+  border-color: #00CFFF;  
+}
+.labeles:hover{ 
+  border-color: #590776;  
+}
+.labe {
+  padding: 1%;
+  width: 80%; 
+  height: 40px;
+}
+.botonNuevo {
+  padding: 12px ;
+  background: #FFFFFF;
+  border-radius: 12px !important;
+  width: 100%;
+  border: solid 1px #80808094;
+}
+.texArea{
+  padding: 1%;
+  width: 100%;
+  min-height: 350px;
+  border-radius: 15px;  
+  border-color: #00CFFF;  
+}
+.texArea:hover{
+  border-color: #590776;  
+}
+
+/* fin login views */
+
+/* inicio comentarios */
+
+.foroComentarios{  
+  margin: auto;
+  background: white;
+  width: 98%;
+  padding: 2%;
+  border-radius: 24px;
+}
+trix-editor {
+  border: 1px solid #3acffc !important;
+  border-radius: 24px !important;  
+  padding: 2em 1em !important;  
+}
+.textoGris{       
+  font-size: 1.1em;
+  color: #7E8EA7;
+}
+.sombra{
+  box-shadow:2px 2px 5px;
+}
+.texArea2 {
+  padding: 1%;
+  width: 100%;
+  min-height: 150px;
+  border-radius: 15px;
+  border-color: #00CFFF;
+}
+
+
+
+/* fin comentarios */

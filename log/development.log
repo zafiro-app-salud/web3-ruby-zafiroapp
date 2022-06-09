@@ -1,0 +1,2791 @@
+Started GET "/" for ::1 at 2022-06-07 23:09:29 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20210923091236_create_users.rb
+
+
+):
+  
+activerecord (7.0.2) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.2) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.2) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.2) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (7.0.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.1) lib/puma/configuration.rb:252:in `call'
+puma (5.6.1) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.1) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.1) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.1) lib/puma/server.rb:441:in `process_client'
+puma (5.6.1) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20210923091236)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "eth_address" varchar, "eth_nonce" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210923091236"]]
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-06-08 04:09:48.296550"], ["updated_at", "2022-06-08 04:09:48.296550"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-06-07 23:09:54 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 6.2ms | Allocations: 4507)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+/usr/share/rvm/gems/ruby-3.0.3/gems/webpacker-5.4.3/lib/webpacker/runner.rb:13:in ``': No such file or directory - yarn (Errno::ENOENT)
+	from /usr/share/rvm/gems/ruby-3.0.3/gems/webpacker-5.4.3/lib/webpacker/runner.rb:13:in `initialize'
+	from /usr/share/rvm/gems/ruby-3.0.3/gems/webpacker-5.4.3/lib/webpacker/runner.rb:6:in `new'
+	from /usr/share/rvm/gems/ruby-3.0.3/gems/webpacker-5.4.3/lib/webpacker/runner.rb:6:in `run'
+	from ./bin/webpack:17:in `block in <main>'
+	from ./bin/webpack:16:in `chdir'
+	from ./bin/webpack:16:in `<main>'
+
+  Rendered layout layouts/application.html.erb (Duration: 508.3ms | Allocations: 46523)
+Completed 500 Internal Server Error in 516ms (ActiveRecord: 0.4ms | Allocations: 50480)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/jsagudelo/codigo/blockchain/ethereum-on-rails/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", media: "all", 'data-turbolinks-track': "reload" %>
+    10:     <%= javascript_pack_tag "application", 'data-turbolinks-track': "reload" %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-06-07 23:13:12 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 5.2ms | Allocations: 4458)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/jsagudelo/codigo/blockchain/ethereum-on-rails/public/packs
+[Webpacker] Hash: cd6cf1633439c952e5db
+Version: webpack 4.46.0
+Time: 1484ms
+Built at: 07/06/2022 11:13:15 p. m.
+                                      Asset      Size        Chunks                         Chunk Names
+     js/application-8ac6986c01a10a4c7dd8.js   122 KiB   application  [emitted] [immutable]  application
+ js/application-8ac6986c01a10a4c7dd8.js.map   136 KiB   application  [emitted] [dev]        application
+    js/sessions_new-b5f2bdd08b8bc5aa40a3.js  35.9 KiB  sessions_new  [emitted] [immutable]  sessions_new
+js/sessions_new-b5f2bdd08b8bc5aa40a3.js.map    36 KiB  sessions_new  [emitted] [dev]        sessions_new
+       js/users_new-6bfa82717f792c01e558.js  32.5 KiB     users_new  [emitted] [immutable]  users_new
+   js/users_new-6bfa82717f792c01e558.js.map  34.2 KiB     users_new  [emitted] [dev]        users_new
+                              manifest.json  1.01 KiB                [emitted]              
+Entrypoint application = js/application-8ac6986c01a10a4c7dd8.js js/application-8ac6986c01a10a4c7dd8.js.map
+Entrypoint sessions_new = js/sessions_new-b5f2bdd08b8bc5aa40a3.js js/sessions_new-b5f2bdd08b8bc5aa40a3.js.map
+Entrypoint users_new = js/users_new-6bfa82717f792c01e558.js js/users_new-6bfa82717f792c01e558.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/sessions_new.js] 6.17 KiB {sessions_new} [built]
+[./app/javascript/packs/users_new.js] 2.99 KiB {users_new} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 5 hidden modules
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 2765.9ms | Allocations: 18660)
+Completed 200 OK in 2773ms (Views: 2767.1ms | ActiveRecord: 0.4ms | Allocations: 22240)
+
+
+Started GET "/signup" for ::1 at 2022-06-07 23:13:21 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/new.html.erb within layouts/application (Duration: 14.3ms | Allocations: 6789)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 10589)
+Completed 200 OK in 32ms (Views: 21.1ms | ActiveRecord: 0.7ms | Allocations: 14969)
+
+
+Started POST "/signup" for ::1 at 2022-06-07 23:13:27 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"sebastian", "eth_address"=>"0x54d098b0791d4a6ce5a0902b470c92bcc14120a1"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:35:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x54d098b0791d4a6ce5a0902b470c92bcc14120a1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."eth_nonce" = ? LIMIT ?[0m  [["eth_nonce", "fa9dcf72-cb80-421a-9170-964d28d50f11"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "sebastian"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "eth_address", "eth_nonce", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "sebastian"], ["eth_address", "0x54d098b0791d4a6ce5a0902b470c92bcc14120a1"], ["eth_nonce", "fa9dcf72-cb80-421a-9170-964d28d50f11"], ["created_at", "2022-06-08 04:13:27.588169"], ["updated_at", "2022-06-08 04:13:27.588169"]]
+  ↳ app/controllers/users_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:35:in `create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 15ms (ActiveRecord: 3.0ms | Allocations: 7436)
+
+
+Started GET "/login" for ::1 at 2022-06-07 23:13:27 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 3409)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 7088)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.1ms | Allocations: 7978)
+
+
+Started GET "/api/v1/users/0x54d098b0791d4a6ce5a0902b470c92bcc14120a1" for ::1 at 2022-06-07 23:13:49 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"0x54d098b0791d4a6ce5a0902b470c92bcc14120a1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x54d098b0791d4a6ce5a0902b470c92bcc14120a1"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1430)
+
+
+Started POST "/login" for ::1 at 2022-06-07 23:13:53 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "eth_message"=>"Ethereum on Rails,1654661629589,fa9dcf72-cb80-421a-9170-964d28d50f11", "eth_address"=>"0x54d098b0791d4a6ce5a0902b470c92bcc14120a1", "eth_signature"=>"0x930b560ba304c4073ae755422838acdaea1b98462661241f487daf36fa259c6d6ab984cf862e54da753e2155e4f846dacd050299364b5e1c5a263b66d4031cb41b"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x54d098b0791d4a6ce5a0902b470c92bcc14120a1"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."eth_address" = ? AND "users"."id" != ? LIMIT ?[0m  [["eth_address", "0x54d098b0791d4a6ce5a0902b470c92bcc14120a1"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."eth_nonce" = ? AND "users"."id" != ? LIMIT ?[0m  [["eth_nonce", "9f63009c-0463-4f4a-b5df-8800a2d856be"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "sebastian"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "eth_nonce" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["eth_nonce", "9f63009c-0463-4f4a-b5df-8800a2d856be"], ["updated_at", "2022-06-08 04:13:53.854083"], ["id", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 39ms (ActiveRecord: 4.5ms | Allocations: 6907)
+
+
+Started GET "/" for ::1 at 2022-06-07 23:13:53 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 10.6ms | Allocations: 2869)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 7514)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.3ms | Allocations: 7971)
+
+
+Started POST "/logout" for ::1 at 2022-06-07 23:21:00 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (Allocations: 335)
+
+
+Started GET "/" for ::1 at 2022-06-07 23:21:00 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1864)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 5498)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.5ms | Allocations: 5923)
+
+
+Started GET "/" for ::1 at 2022-06-08 22:48:29 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 6.8ms | Allocations: 4455)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 38.2ms | Allocations: 17366)
+Completed 200 OK in 46ms (Views: 39.6ms | ActiveRecord: 0.4ms | Allocations: 21067)
+
+
+Started GET "/signup" for ::1 at 2022-06-08 22:48:36 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/new.html.erb within layouts/application (Duration: 16.1ms | Allocations: 5071)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 8852)
+Completed 200 OK in 40ms (Views: 27.5ms | ActiveRecord: 0.8ms | Allocations: 13200)
+
+
+Started POST "/signup" for ::1 at 2022-06-08 22:48:47 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"", "eth_address"=>"0x54d098b0791d4a6ce5a0902b470c92bcc14120a1"}}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/new.html.erb within layouts/application (Duration: 7.6ms | Allocations: 2918)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 6368)
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 0.2ms | Allocations: 7137)
+
+
+Started POST "/signup" for ::1 at 2022-06-08 22:49:13 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"sebastian", "eth_address"=>"0x54d098b0791d4a6ce5a0902b470c92bcc14120a1"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:35:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x54d098b0791d4a6ce5a0902b470c92bcc14120a1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."eth_nonce" = ? LIMIT ?[0m  [["eth_nonce", "d78432a9-f1ad-4e6e-9a1e-82fe14ded022"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "sebastian"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:35:in `create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 11ms (ActiveRecord: 0.5ms | Allocations: 6026)
+
+
+Started GET "/login" for ::1 at 2022-06-08 22:49:13 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 3362)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 7073)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.1ms | Allocations: 7965)
+
+
+Started GET "/signup" for ::1 at 2022-06-08 22:49:18 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/new.html.erb within layouts/application (Duration: 22.1ms | Allocations: 2921)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 37.2ms | Allocations: 6385)
+Completed 200 OK in 41ms (Views: 37.8ms | ActiveRecord: 0.5ms | Allocations: 6884)
+
+
+Started POST "/signup" for ::1 at 2022-06-08 22:49:25 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"sebastian agudelo", "eth_address"=>"0x54d098b0791d4a6ce5a0902b470c92bcc14120a1"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:35:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x54d098b0791d4a6ce5a0902b470c92bcc14120a1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."eth_nonce" = ? LIMIT ?[0m  [["eth_nonce", "1a0d8520-69c5-46c5-814d-694e76197785"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "sebastian agudelo"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:35:in `create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 17ms (ActiveRecord: 1.0ms | Allocations: 5137)
+
+
+Started GET "/login" for ::1 at 2022-06-08 22:49:25 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2688)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 6177)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.1ms | Allocations: 6604)
+
+
+Started GET "/login" for ::1 at 2022-06-08 22:50:05 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered sessions/new.html.erb within layouts/application (Duration: 10.7ms | Allocations: 2690)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 6170)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.2ms | Allocations: 6590)
+
+
+Started GET "/api/v1/users/0x54d098b0791d4a6ce5a0902b470c92bcc14120a1" for ::1 at 2022-06-08 22:50:09 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"0x54d098b0791d4a6ce5a0902b470c92bcc14120a1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x54d098b0791d4a6ce5a0902b470c92bcc14120a1"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 1432)
+
+
+Started POST "/login" for ::1 at 2022-06-08 22:50:21 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "eth_message"=>"Ethereum on Rails,1654746609145,9f63009c-0463-4f4a-b5df-8800a2d856be", "eth_address"=>"0x54d098b0791d4a6ce5a0902b470c92bcc14120a1", "eth_signature"=>"0x8189e6f495ca2b1acdf50174899bed362e48441a39ff4720f9fba94b7ea7c7cc046cced36d237d754ed5ad3e6902fab58dd18308d9aeca195fbfd0a4734c29e31c"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x54d098b0791d4a6ce5a0902b470c92bcc14120a1"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."eth_address" = ? AND "users"."id" != ? LIMIT ?[0m  [["eth_address", "0x54d098b0791d4a6ce5a0902b470c92bcc14120a1"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."eth_nonce" = ? AND "users"."id" != ? LIMIT ?[0m  [["eth_nonce", "e12a778c-89d5-4b9d-a547-a99568c55ea7"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "sebastian"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Update (1.4ms)[0m  [1m[33mUPDATE "users" SET "eth_nonce" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["eth_nonce", "e12a778c-89d5-4b9d-a547-a99568c55ea7"], ["updated_at", "2022-06-09 03:50:21.631161"], ["id", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 35ms (ActiveRecord: 5.0ms | Allocations: 7631)
+
+
+Started GET "/" for ::1 at 2022-06-08 22:50:21 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 7.2ms | Allocations: 2868)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 7508)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.3ms | Allocations: 7964)
+
+
+Started GET "/" for ::1 at 2022-06-08 22:57:02 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 16.1ms | Allocations: 2889)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 25.1ms | Allocations: 7345)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.8ms | Allocations: 7764)
+
+
+Started GET "/" for ::1 at 2022-06-08 22:57:04 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 14.1ms | Allocations: 2085)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 6515)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.4ms | Allocations: 6936)
+
+
+Started GET "/" for ::1 at 2022-06-08 22:57:37 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2085)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 6534)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.2ms | Allocations: 6955)
+
+
+Started GET "/" for ::1 at 2022-06-08 22:57:43 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2084)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 6514)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.2ms | Allocations: 6934)
+
+
+Started POST "/logout" for ::1 at 2022-06-08 22:57:51 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 336)
+
+
+Started GET "/" for ::1 at 2022-06-08 22:57:51 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 2.2ms | Allocations: 958)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 4579)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.2ms | Allocations: 5006)
+
+
+Started GET "/signup" for ::1 at 2022-06-08 22:57:52 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/new.html.erb within layouts/application (Duration: 11.2ms | Allocations: 2916)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 6385)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.2ms | Allocations: 6826)
+
+
+Started POST "/signup" for ::1 at 2022-06-08 22:57:58 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"byson", "eth_address"=>"0x54d098b0791d4a6ce5a0902b470c92bcc14120a1"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:35:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x54d098b0791d4a6ce5a0902b470c92bcc14120a1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."eth_nonce" = ? LIMIT ?[0m  [["eth_nonce", "2f3348e8-77aa-435c-8e29-ad597d10d40c"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "byson"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:35:in `create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 25ms (ActiveRecord: 1.3ms | Allocations: 5085)
+
+
+Started GET "/login" for ::1 at 2022-06-08 22:57:58 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2688)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 6188)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.1ms | Allocations: 6615)
+
+
+Started GET "/api/v1/users/0x54d098b0791d4a6ce5a0902b470c92bcc14120a1" for ::1 at 2022-06-08 22:59:12 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"0x54d098b0791d4a6ce5a0902b470c92bcc14120a1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x54d098b0791d4a6ce5a0902b470c92bcc14120a1"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 852)
+
+
+Started GET "/login" for ::1 at 2022-06-08 22:59:26 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered sessions/new.html.erb within layouts/application (Duration: 15.6ms | Allocations: 2690)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 6151)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.3ms | Allocations: 6570)
+
+
+Started GET "/api/v1/users/0x54d098b0791d4a6ce5a0902b470c92bcc14120a1" for ::1 at 2022-06-08 22:59:28 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"0x54d098b0791d4a6ce5a0902b470c92bcc14120a1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x54d098b0791d4a6ce5a0902b470c92bcc14120a1"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 838)
+
+
+Started GET "/login" for ::1 at 2022-06-08 23:01:10 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered sessions/new.html.erb within layouts/application (Duration: 14.2ms | Allocations: 2690)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 6170)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.2ms | Allocations: 6591)
+
+
+Started GET "/api/v1/users/0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2" for ::1 at 2022-06-08 23:01:24 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 807)
+
+
+Started GET "/login" for ::1 at 2022-06-08 23:02:06 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered sessions/new.html.erb within layouts/application (Duration: 12.7ms | Allocations: 2690)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 6170)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.3ms | Allocations: 6591)
+
+
+Started GET "/login" for ::1 at 2022-06-08 23:02:06 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered sessions/new.html.erb within layouts/application (Duration: 10.8ms | Allocations: 2690)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 6151)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.2ms | Allocations: 6570)
+
+
+Started GET "/api/v1/users/0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2" for ::1 at 2022-06-08 23:02:08 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 804)
+
+
+Started GET "/signup" for ::1 at 2022-06-08 23:02:22 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/new.html.erb within layouts/application (Duration: 13.1ms | Allocations: 2868)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 6329)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.1ms | Allocations: 6766)
+
+
+Started POST "/signup" for ::1 at 2022-06-08 23:02:31 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"byson", "eth_address"=>"0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:35:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."eth_nonce" = ? LIMIT ?[0m  [["eth_nonce", "0d0aed1c-6e92-4fca-bc09-067fe4fa3ff8"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "byson"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "eth_address", "eth_nonce", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "byson"], ["eth_address", "0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"], ["eth_nonce", "0d0aed1c-6e92-4fca-bc09-067fe4fa3ff8"], ["created_at", "2022-06-09 04:02:31.885053"], ["updated_at", "2022-06-09 04:02:31.885053"]]
+  ↳ app/controllers/users_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:35:in `create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 22ms (ActiveRecord: 3.4ms | Allocations: 5555)
+
+
+Started GET "/login" for ::1 at 2022-06-08 23:02:31 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2690)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 6187)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.1ms | Allocations: 6615)
+
+
+Started GET "/api/v1/users/0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2" for ::1 at 2022-06-08 23:02:43 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 835)
+
+
+Started POST "/login" for ::1 at 2022-06-08 23:02:49 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "eth_message"=>"Ethereum on Rails,1654747363696,0d0aed1c-6e92-4fca-bc09-067fe4fa3ff8", "eth_address"=>"0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2", "eth_signature"=>"0xaa8272c1c0f79f0bd7ddead1e983992fb16d4b0e529893344ae59c1479e0035d3dbeb3ccb5ef8d17d7dcc6546ff2f98157485373d6d352e477dc40b7bb5426311c"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."eth_address" = ? AND "users"."id" != ? LIMIT ?[0m  [["eth_address", "0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."eth_nonce" = ? AND "users"."id" != ? LIMIT ?[0m  [["eth_nonce", "42a735ea-2142-433b-acd3-fda0cd5e9338"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "byson"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Update (1.6ms)[0m  [1m[33mUPDATE "users" SET "eth_nonce" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["eth_nonce", "42a735ea-2142-433b-acd3-fda0cd5e9338"], ["updated_at", "2022-06-09 04:02:49.968623"], ["id", 2]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 35ms (ActiveRecord: 5.3ms | Allocations: 6464)
+
+
+Started GET "/" for ::1 at 2022-06-08 23:02:49 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 8.2ms | Allocations: 2084)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 6566)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.3ms | Allocations: 6994)
+
+
+Started POST "/logout" for ::1 at 2022-06-08 23:21:14 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (Allocations: 335)
+
+
+Started GET "/" for ::1 at 2022-06-08 23:21:14 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1822)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 5462)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.7ms | Allocations: 5889)
+
+
+Started GET "/login" for ::1 at 2022-06-08 23:27:11 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered sessions/new.html.erb within layouts/application (Duration: 8.7ms | Allocations: 3571)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 7051)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.5ms | Allocations: 7473)
+
+
+Started GET "/api/v1/users/0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2" for ::1 at 2022-06-08 23:27:14 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 852)
+
+
+Started POST "/login" for ::1 at 2022-06-08 23:27:22 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "eth_message"=>"Ethereum on Rails,1654748834064,42a735ea-2142-433b-acd3-fda0cd5e9338", "eth_address"=>"0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2", "eth_signature"=>"0xd88e7eaa044e12ff9c6a2d07bca19b9718597fd88162141f286c1f50aaeb268d234b7e648d276d4d3c5436c27c984382fecdd4e48a89d971a751a36b23186e051b"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."eth_address" = ? AND "users"."id" != ? LIMIT ?[0m  [["eth_address", "0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."eth_nonce" = ? AND "users"."id" != ? LIMIT ?[0m  [["eth_nonce", "3f5a3a3b-191d-40f6-bbb6-7e6261ae6d74"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "byson"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "eth_nonce" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["eth_nonce", "3f5a3a3b-191d-40f6-bbb6-7e6261ae6d74"], ["updated_at", "2022-06-09 04:27:22.045094"], ["id", 2]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 24ms (ActiveRecord: 4.4ms | Allocations: 6484)
+
+
+Started GET "/" for ::1 at 2022-06-08 23:27:22 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 10.4ms | Allocations: 2101)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 6565)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.4ms | Allocations: 6993)
+
+
+Started POST "/logout" for ::1 at 2022-06-08 23:37:19 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (Allocations: 335)
+
+
+Started GET "/" for ::1 at 2022-06-08 23:37:19 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1821)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 5442)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.5ms | Allocations: 5867)
+
+
+Started GET "/login" for ::1 at 2022-06-08 23:37:24 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered sessions/new.html.erb within layouts/application (Duration: 10.6ms | Allocations: 2690)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 6159)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.2ms | Allocations: 6582)
+
+
+Started GET "/api/v1/users/0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2" for ::1 at 2022-06-08 23:37:26 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 853)
+
+
+Started POST "/login" for ::1 at 2022-06-08 23:37:30 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "eth_message"=>"Ethereum on Rails,1654749446198,3f5a3a3b-191d-40f6-bbb6-7e6261ae6d74", "eth_address"=>"0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2", "eth_signature"=>"0x648501d22dc663b1d11b7213b0949e34b2050679856ce5e8732f86b0c763188471edf254b0fb678b64a15cef2cd5cc307c83e5fad58cce424d541a180116c26f1c"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."eth_address" = ? AND "users"."id" != ? LIMIT ?[0m  [["eth_address", "0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."eth_nonce" = ? AND "users"."id" != ? LIMIT ?[0m  [["eth_nonce", "d0d08e5f-9f53-4e26-b94a-68e42a70044e"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "byson"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "eth_nonce" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["eth_nonce", "d0d08e5f-9f53-4e26-b94a-68e42a70044e"], ["updated_at", "2022-06-09 04:37:30.381610"], ["id", 2]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 32ms (ActiveRecord: 6.5ms | Allocations: 6475)
+
+
+Started GET "/" for ::1 at 2022-06-08 23:37:30 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 25.0ms | Allocations: 2103)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 42.8ms | Allocations: 6586)
+Completed 200 OK in 48ms (Views: 46.1ms | ActiveRecord: 0.3ms | Allocations: 7015)
+
+
+Started GET "/" for ::1 at 2022-06-08 23:38:45 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2508)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 5747)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.2ms | Allocations: 6726)
+
+
+Started GET "/" for ::1 at 2022-06-08 23:38:53 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 16.4ms | Allocations: 2502)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.3ms | Allocations: 5730)
+Completed 200 OK in 40ms (Views: 35.4ms | ActiveRecord: 0.4ms | Allocations: 6738)
+
+
+Started GET "/" for ::1 at 2022-06-08 23:39:08 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 9.8ms | Allocations: 2502)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 5725)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.3ms | Allocations: 6731)
+
+
+Started GET "/api/v1/users" for ::1 at 2022-06-08 23:44:20 -0500
+Processing by Api::V1::UsersController#index as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 324)
+
+
+Started GET "/api/v1/user" for ::1 at 2022-06-08 23:44:32 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/user"):
+  
+Started GET "/api/v1/users" for ::1 at 2022-06-08 23:44:34 -0500
+Processing by Api::V1::UsersController#index as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 266)
+
+
+Started GET "/api/v1/users" for ::1 at 2022-06-08 23:44:36 -0500
+Processing by Api::V1::UsersController#index as HTML
+Completed 200 OK in 1ms (Views: 0.3ms | Allocations: 186)
+
+
+Started GET "/" for ::1 at 2022-06-08 23:44:36 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 24.4ms | Allocations: 6568)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | Allocations: 9453)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 2.5ms | Allocations: 10208)
+
+
+Started POST "/logout" for ::1 at 2022-06-08 23:44:40 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 489)
+
+
+Started GET "/" for ::1 at 2022-06-08 23:44:40 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1128)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3990)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.2ms | Allocations: 4461)
+
+
+Started GET "/api/v1/users" for ::1 at 2022-06-08 23:44:49 -0500
+Processing by Api::V1::UsersController#index as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 193)
+
+
+Started GET "/" for ::1 at 2022-06-08 23:44:51 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 5.0ms | Allocations: 940)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 3686)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.2ms | Allocations: 4106)
+
+
+Started GET "/" for ::1 at 2022-06-08 23:46:54 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 7.1ms | Allocations: 3355)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 6318)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.6ms | Allocations: 7073)
+
+
+Started GET "/api/v1/users" for ::1 at 2022-06-08 23:47:03 -0500
+Processing by Api::V1::UsersController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2625)
+
+
+  
+NameError (undefined local variable or method `user' for #<Api::V1::UsersController:0x000000000197a8>
+Did you mean?  super):
+  
+app/controllers/api/v1/users_controller.rb:7:in `index'
+Started GET "/api/v1/users" for ::1 at 2022-06-08 23:47:43 -0500
+Processing by Api::V1::UsersController#index as HTML
+Completed 500 Internal Server Error in 8ms (Allocations: 2565)
+
+
+  
+NameError (undefined local variable or method `user' for #<Api::V1::UsersController:0x0000000001e140>
+Did you mean?  super):
+  
+app/controllers/api/v1/users_controller.rb:7:in `index'
+Started GET "/api/v1/users" for ::1 at 2022-06-08 23:47:51 -0500
+Processing by Api::V1::UsersController#index as HTML
+Completed 500 Internal Server Error in 3ms (Allocations: 2565)
+
+
+  
+NameError (undefined local variable or method `user' for #<Api::V1::UsersController:0x00000000022a10>
+Did you mean?  super):
+  
+app/controllers/api/v1/users_controller.rb:7:in `index'
+Started GET "/api/v1/users" for ::1 at 2022-06-08 23:47:58 -0500
+Processing by Api::V1::UsersController#index as HTML
+Completed 500 Internal Server Error in 1ms (Allocations: 1017)
+
+
+  
+NoMethodError (undefined method `logged_in?' for nil:NilClass):
+  
+app/controllers/api/v1/users_controller.rb:7:in `index'
+Started GET "/api/v1/users" for ::1 at 2022-06-08 23:48:10 -0500
+Processing by Api::V1::UsersController#index as HTML
+Completed 500 Internal Server Error in 7ms (Allocations: 2529)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<Api::V1::UsersController:0x0000000002bed0>):
+  
+app/controllers/api/v1/users_controller.rb:7:in `index'
+Started GET "/api/v1/users" for ::1 at 2022-06-08 23:48:32 -0500
+  
+SyntaxError (/home/jsagudelo/codigo/blockchain/ethereum-on-rails/app/controllers/api/v1/users_controller.rb:8: syntax error, unexpected `end'
+  end
+  ^~~
+/home/jsagudelo/codigo/blockchain/ethereum-on-rails/app/controllers/api/v1/users_controller.rb:31: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/v1/users_controller.rb:8: syntax error, unexpected `end'
+app/controllers/api/v1/users_controller.rb:31: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/v1/users_controller.rb:8: syntax error, unexpected `end'
+app/controllers/api/v1/users_controller.rb:31: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/v1/users_controller.rb:8: syntax error, unexpected `end'
+app/controllers/api/v1/users_controller.rb:31: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/api/v1/users" for ::1 at 2022-06-08 23:48:40 -0500
+Processing by Api::V1::UsersController#index as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 323)
+
+
+Started GET "/api/v1/users" for ::1 at 2022-06-08 23:48:57 -0500
+Processing by Api::V1::UsersController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.9ms | Allocations: 5014)
+
+
+Started GET "/api/v1/users" for ::1 at 2022-06-08 23:50:45 -0500
+Processing by Api::V1::UsersController#index as HTML
+Completed 500 Internal Server Error in 3ms (Allocations: 2575)
+
+
+  
+NameError (undefined local variable or method `user' for #<Api::V1::UsersController:0x0000000003df18>
+Did you mean?  users):
+  
+app/controllers/api/v1/users_controller.rb:8:in `index'
+Started GET "/api/v1/users" for ::1 at 2022-06-08 23:51:08 -0500
+Processing by Api::V1::UsersController#index as HTML
+Completed 500 Internal Server Error in 6ms (Allocations: 2532)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<Api::V1::UsersController:0x00000000042a18>):
+  
+app/controllers/api/v1/users_controller.rb:8:in `index'
+Started GET "/api/v1/users" for ::1 at 2022-06-08 23:51:20 -0500
+Processing by Api::V1::UsersController#index as HTML
+Completed 500 Internal Server Error in 6ms (Allocations: 2532)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<Api::V1::UsersController:0x00000000047518>):
+  
+app/controllers/api/v1/users_controller.rb:9:in `index'
+Started GET "/api/v1/users" for ::1 at 2022-06-08 23:51:37 -0500
+Processing by Api::V1::UsersController#index as HTML
+Completed 500 Internal Server Error in 5ms (Allocations: 2532)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<Api::V1::UsersController:0x0000000004bf50>):
+  
+app/controllers/api/v1/users_controller.rb:11:in `index'
+Started GET "/api/v1/users" for ::1 at 2022-06-08 23:51:49 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2810)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<Api::V1::UsersController:0x0000000000b770>):
+  
+app/controllers/api/v1/users_controller.rb:11:in `index'
+Started GET "/api/v1/users" for ::1 at 2022-06-08 23:51:58 -0500
+Processing by Api::V1::UsersController#index as HTML
+Completed 500 Internal Server Error in 4ms (Allocations: 2548)
+
+
+  
+NameError (undefined local variable or method `users' for #<Api::V1::UsersController:0x00000000010388>):
+  
+app/controllers/api/v1/users_controller.rb:11:in `index'
+Started GET "/api/v1/users" for ::1 at 2022-06-08 23:52:03 -0500
+Processing by Api::V1::UsersController#index as HTML
+Completed 500 Internal Server Error in 3ms (Allocations: 2578)
+
+
+  
+NameError (undefined local variable or method `user' for #<Api::V1::UsersController:0x00000000014c80>
+Did you mean?  users):
+  
+app/controllers/api/v1/users_controller.rb:11:in `index'
+Started GET "/api/v1/users" for ::1 at 2022-06-08 23:52:07 -0500
+Processing by Api::V1::UsersController#index as HTML
+Completed 500 Internal Server Error in 4ms (Allocations: 2547)
+
+
+  
+NameError (undefined local variable or method `users' for #<Api::V1::UsersController:0x000000000195a0>):
+  
+app/controllers/api/v1/users_controller.rb:11:in `index'
+Started GET "/api/v1/users" for ::1 at 2022-06-08 23:53:09 -0500
+Processing by Api::V1::UsersController#index as HTML
+Completed 500 Internal Server Error in 5ms (Allocations: 2532)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<Api::V1::UsersController:0x0000000001de98>):
+  
+app/controllers/api/v1/users_controller.rb:11:in `index'
+Started GET "/api/v1/users" for ::1 at 2022-06-08 23:53:21 -0500
+Processing by Api::V1::UsersController#index as HTML
+Completed 500 Internal Server Error in 2ms (Allocations: 1018)
+
+
+  
+NoMethodError (undefined method `logged_in?' for nil:NilClass):
+  
+app/controllers/api/v1/users_controller.rb:11:in `index'
+Started GET "/api/v1/users" for ::1 at 2022-06-08 23:54:16 -0500
+Processing by Api::V1::UsersController#index as HTML
+Completed 500 Internal Server Error in 2ms (Allocations: 989)
+
+
+  
+NoMethodError (undefined method `logged_in?' for nil:NilClass):
+  
+app/controllers/api/v1/users_controller.rb:11:in `index'
+Started GET "/api/v1/users" for ::1 at 2022-06-08 23:54:29 -0500
+Processing by Api::V1::UsersController#index as HTML
+Completed 500 Internal Server Error in 3ms (Allocations: 2582)
+
+
+  
+NameError (undefined local variable or method `user' for #<Api::V1::UsersController:0x0000000002bb88>
+Did you mean?  users):
+  
+app/controllers/api/v1/users_controller.rb:11:in `index'
+Started GET "/api/v1/users" for ::1 at 2022-06-08 23:54:39 -0500
+Processing by Api::V1::UsersController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api_controller.rb:10:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:10:in `current_user'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.7ms | Allocations: 5155)
+
+
+  
+NoMethodError (undefined method `logged_in?' for nil:NilClass):
+  
+app/controllers/api/v1/users_controller.rb:11:in `index'
+Started GET "/api/v1/users" for ::1 at 2022-06-08 23:55:26 -0500
+Processing by Api::V1::UsersController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api_controller.rb:10:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api_controller.rb:10:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:13:in `index'
+Completed 200 OK in 16ms (Views: 6.7ms | ActiveRecord: 3.3ms | Allocations: 8048)
+
+
+Started GET "/" for ::1 at 2022-06-08 23:57:25 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 7.0ms | Allocations: 3668)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.6ms | Allocations: 15586)
+Completed 200 OK in 34ms (Views: 30.6ms | ActiveRecord: 0.7ms | Allocations: 17826)
+
+
+Started GET "/" for ::1 at 2022-06-09 00:09:44 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 11.4ms | Allocations: 3116)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/jsagudelo/codigo/blockchain/ethereum-on-rails/public/packs
+[Webpacker] Hash: f5666c24c3346eee11ef
+Version: webpack 4.46.0
+Time: 772ms
+Built at: 09/06/2022 12:09:47 a. m.
+                                      Asset      Size        Chunks                         Chunk Names
+     js/application-8ac6986c01a10a4c7dd8.js   122 KiB   application  [emitted] [immutable]  application
+ js/application-8ac6986c01a10a4c7dd8.js.map   136 KiB   application  [emitted] [dev]        application
+    js/contractData-6d099cb090d54edefe3e.js  4.64 KiB  contractData  [emitted] [immutable]  contractData
+js/contractData-6d099cb090d54edefe3e.js.map  4.74 KiB  contractData  [emitted] [dev]        contractData
+    js/sessions_new-b5f2bdd08b8bc5aa40a3.js  35.9 KiB  sessions_new  [emitted] [immutable]  sessions_new
+js/sessions_new-b5f2bdd08b8bc5aa40a3.js.map    36 KiB  sessions_new  [emitted] [dev]        sessions_new
+       js/users_new-6bfa82717f792c01e558.js  32.5 KiB     users_new  [emitted] [immutable]  users_new
+   js/users_new-6bfa82717f792c01e558.js.map  34.2 KiB     users_new  [emitted] [dev]        users_new
+                              manifest.json  1.35 KiB                [emitted]              
+Entrypoint application = js/application-8ac6986c01a10a4c7dd8.js js/application-8ac6986c01a10a4c7dd8.js.map
+Entrypoint contractData = js/contractData-6d099cb090d54edefe3e.js js/contractData-6d099cb090d54edefe3e.js.map
+Entrypoint sessions_new = js/sessions_new-b5f2bdd08b8bc5aa40a3.js js/sessions_new-b5f2bdd08b8bc5aa40a3.js.map
+Entrypoint users_new = js/users_new-6bfa82717f792c01e558.js js/users_new-6bfa82717f792c01e558.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/contractData.js] 758 bytes {contractData} [built]
+[./app/javascript/packs/sessions_new.js] 6.17 KiB {sessions_new} [built]
+[./app/javascript/packs/users_new.js] 2.99 KiB {users_new} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 5 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 2661.2ms | Allocations: 7445)
+Completed 200 OK in 2663ms (Views: 2662.4ms | ActiveRecord: 0.6ms | Allocations: 8200)
+
+
+Started GET "/" for ::1 at 2022-06-09 00:10:52 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 3.0ms | Allocations: 952)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/jsagudelo/codigo/blockchain/ethereum-on-rails/public/packs
+[Webpacker] Hash: cd6cf1633439c952e5db
+Version: webpack 4.46.0
+Time: 697ms
+Built at: 09/06/2022 12:10:54 a. m.
+                                      Asset      Size        Chunks                         Chunk Names
+     js/application-8ac6986c01a10a4c7dd8.js   122 KiB   application  [emitted] [immutable]  application
+ js/application-8ac6986c01a10a4c7dd8.js.map   136 KiB   application  [emitted] [dev]        application
+    js/sessions_new-b5f2bdd08b8bc5aa40a3.js  35.9 KiB  sessions_new  [emitted] [immutable]  sessions_new
+js/sessions_new-b5f2bdd08b8bc5aa40a3.js.map    36 KiB  sessions_new  [emitted] [dev]        sessions_new
+       js/users_new-6bfa82717f792c01e558.js  32.5 KiB     users_new  [emitted] [immutable]  users_new
+   js/users_new-6bfa82717f792c01e558.js.map  34.2 KiB     users_new  [emitted] [dev]        users_new
+                              manifest.json  1.01 KiB                [emitted]              
+Entrypoint application = js/application-8ac6986c01a10a4c7dd8.js js/application-8ac6986c01a10a4c7dd8.js.map
+Entrypoint sessions_new = js/sessions_new-b5f2bdd08b8bc5aa40a3.js js/sessions_new-b5f2bdd08b8bc5aa40a3.js.map
+Entrypoint users_new = js/users_new-6bfa82717f792c01e558.js js/users_new-6bfa82717f792c01e558.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/sessions_new.js] 6.17 KiB {sessions_new} [built]
+[./app/javascript/packs/users_new.js] 2.99 KiB {users_new} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 5 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 1943.2ms | Allocations: 4909)
+Completed 200 OK in 1945ms (Views: 1943.9ms | ActiveRecord: 0.1ms | Allocations: 5393)
+
+
+Started GET "/" for ::1 at 2022-06-09 00:13:09 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 58.1ms | Allocations: 6251)
+  Rendered layout layouts/application.html.erb (Duration: 58.6ms | Allocations: 6342)
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 0.2ms | Allocations: 7293)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_user_registration_path' for #<ActionView::Base:0x0000000003e378>):
+    36:           </p>  
+    37:           <br>
+    38:           <div >                
+    39:               <%= link_to new_user_registration_path do %>          
+    40:                   <button class=" botonNuevaPagina ">Regístrarme</button>
+    41:               <% end %>    
+    42:               
+  
+app/views/pages/demo.html.erb:39
+Started GET "/" for ::1 at 2022-06-09 00:14:01 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 39.3ms | Allocations: 6208)
+  Rendered layout layouts/application.html.erb (Duration: 39.9ms | Allocations: 6299)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.4ms | Allocations: 7268)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `posts_path' for #<ActionView::Base:0x0000000003e918>):
+    220:   <div class="row center">
+    221:       
+    222:       <div class="col-lg-12 col-md-12 col-sm-12">  
+    223:           <%= link_to  posts_path  do  %>
+    224:                   <span class="botonrellenoMOrado">Ir al foro medico</span>
+    225:           <% end %>
+    226:           <br>
+  
+app/views/pages/demo.html.erb:223
+Started GET "/" for ::1 at 2022-06-09 00:14:21 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 12.0ms | Allocations: 2047)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 52.3ms | Allocations: 10557)
+Completed 200 OK in 58ms (Views: 55.1ms | ActiveRecord: 0.3ms | Allocations: 11565)
+
+
+Started GET "/images/neurologia.png" for ::1 at 2022-06-09 00:14:22 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/neurologia.png"):
+  
+Started GET "/images/oftalmo.png" for ::1 at 2022-06-09 00:14:22 -0500
+Started GET "/images/cardiol.png" for ::1 at 2022-06-09 00:14:22 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/cardiol.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/oftalmo.png"):
+  
+Started GET "/images/osteo.png" for ::1 at 2022-06-09 00:14:22 -0500
+Started GET "/images/neum.png" for ::1 at 2022-06-09 00:14:22 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/neum.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/osteo.png"):
+  
+Started GET "/images/fondo-zafiro.png" for ::1 at 2022-06-09 00:14:22 -0500
+Started GET "/images/forr.png" for ::1 at 2022-06-09 00:14:22 -0500
+Started GET "/images/interope.png" for ::1 at 2022-06-09 00:14:22 -0500
+Started GET "/images/cov1.png" for ::1 at 2022-06-09 00:14:22 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/fondo-zafiro.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/forr.png"):
+  
+Started GET "/images/moradoBor.png" for ::1 at 2022-06-09 00:14:22 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/cov1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/interope.png"):
+  
+Started GET "/images/tarjeta-medico.png" for ::1 at 2022-06-09 00:14:22 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/moradoBor.png"):
+  
+Started GET "/images/wppW.png" for ::1 at 2022-06-09 00:14:22 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/tarjeta-medico.png"):
+  
+Started GET "/images/team.png" for ::1 at 2022-06-09 00:14:22 -0500
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 00:14:22 -0500
+Started GET "/images/paola.jpg" for ::1 at 2022-06-09 00:14:22 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/wppW.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/team.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/images/yuli.png" for ::1 at 2022-06-09 00:14:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/paola.jpg"):
+  
+Started GET "/images/david.png" for ::1 at 2022-06-09 00:14:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/yuli.png"):
+  
+Started GET "/images/elvia.jpg" for ::1 at 2022-06-09 00:14:23 -0500
+Started GET "/images/doctorMedico.png" for ::1 at 2022-06-09 00:14:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/david.png"):
+  
+Started GET "/images/pierre.jpg" for ::1 at 2022-06-09 00:14:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/elvia.jpg"):
+  
+Started GET "/images/edwin.jpg" for ::1 at 2022-06-09 00:14:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/doctorMedico.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/pierre.jpg"):
+  
+Started GET "/images/maria.jpg" for ::1 at 2022-06-09 00:14:23 -0500
+Started GET "/images/medico-fon.png" for ::1 at 2022-06-09 00:14:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/edwin.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/maria.jpg"):
+  
+Started GET "/images/sebas.png" for ::1 at 2022-06-09 00:14:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/medico-fon.png"):
+  
+Started GET "/images/notired.png" for ::1 at 2022-06-09 00:14:23 -0500
+Started GET "/images/gente.png" for ::1 at 2022-06-09 00:14:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/sebas.png"):
+  
+Started GET "/images/eltiempo.png" for ::1 at 2022-06-09 00:14:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/notired.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/gente.png"):
+  
+Started GET "/images/contactanos.png" for ::1 at 2022-06-09 00:14:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/eltiempo.png"):
+  
+Started GET "/images/audifono.png" for ::1 at 2022-06-09 00:14:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/contactanos.png"):
+  
+Started GET "/images/cuadroZafiro.png" for ::1 at 2022-06-09 00:14:23 -0500
+Started GET "/images/appstore.png" for ::1 at 2022-06-09 00:14:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/audifono.png"):
+  
+Started GET "/images/android.png" for ::1 at 2022-06-09 00:14:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/appstore.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/cuadroZafiro.png"):
+  
+Started GET "/images/cel.png" for ::1 at 2022-06-09 00:14:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/android.png"):
+  
+Started GET "/images/convenio.png" for ::1 at 2022-06-09 00:14:24 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/cel.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/convenio.png"):
+  
+Started GET "/images/tarjeta-usuario.png" for ::1 at 2022-06-09 00:14:24 -0500
+Started GET "/images/clavijo.jpg" for ::1 at 2022-06-09 00:14:24 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/tarjeta-usuario.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/clavijo.jpg"):
+  
+Started GET "/" for ::1 at 2022-06-09 00:15:22 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 7.7ms | Allocations: 2048)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 5191)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.2ms | Allocations: 6162)
+
+
+Started GET "/images/neurologia.png" for ::1 at 2022-06-09 00:15:23 -0500
+Started GET "/images/oftalmo.png" for ::1 at 2022-06-09 00:15:23 -0500
+Started GET "/images/cardiol.png" for ::1 at 2022-06-09 00:15:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/neurologia.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/cardiol.png"):
+  
+Started GET "/images/neum.png" for ::1 at 2022-06-09 00:15:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/oftalmo.png"):
+  
+Started GET "/images/osteo.png" for ::1 at 2022-06-09 00:15:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/neum.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/osteo.png"):
+  
+Started GET "/images/forr.png" for ::1 at 2022-06-09 00:15:23 -0500
+Started GET "/images/interope.png" for ::1 at 2022-06-09 00:15:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/forr.png"):
+  
+Started GET "/images/cov1.png" for ::1 at 2022-06-09 00:15:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/interope.png"):
+  
+Started GET "/images/moradoBor.png" for ::1 at 2022-06-09 00:15:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/cov1.png"):
+  
+Started GET "/images/wppW.png" for ::1 at 2022-06-09 00:15:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/moradoBor.png"):
+  
+Started GET "/images/doctorMedico.png" for ::1 at 2022-06-09 00:15:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/wppW.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/doctorMedico.png"):
+  
+Started GET "/images/team.png" for ::1 at 2022-06-09 00:15:23 -0500
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 00:15:23 -0500
+Started GET "/images/paola.jpg" for ::1 at 2022-06-09 00:15:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/team.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/images/yuli.png" for ::1 at 2022-06-09 00:15:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/paola.jpg"):
+  
+Started GET "/images/elvia.jpg" for ::1 at 2022-06-09 00:15:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/yuli.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/elvia.jpg"):
+  
+Started GET "/images/clavijo.jpg" for ::1 at 2022-06-09 00:15:24 -0500
+Started GET "/images/pierre.jpg" for ::1 at 2022-06-09 00:15:24 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/clavijo.jpg"):
+  
+Started GET "/images/edwin.jpg" for ::1 at 2022-06-09 00:15:24 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/pierre.jpg"):
+  
+Started GET "/images/david.png" for ::1 at 2022-06-09 00:15:24 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/edwin.jpg"):
+  
+Started GET "/images/maria.jpg" for ::1 at 2022-06-09 00:15:24 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/maria.jpg"):
+  
+Started GET "/images/medico-fon.png" for ::1 at 2022-06-09 00:15:24 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/david.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/medico-fon.png"):
+  
+Started GET "/images/sebas.png" for ::1 at 2022-06-09 00:15:24 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/sebas.png"):
+  
+Started GET "/images/notired.png" for ::1 at 2022-06-09 00:15:24 -0500
+Started GET "/images/gente.png" for ::1 at 2022-06-09 00:15:24 -0500
+Started GET "/images/eltiempo.png" for ::1 at 2022-06-09 00:15:24 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/notired.png"):
+  
+Started GET "/images/contactanos.png" for ::1 at 2022-06-09 00:15:24 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/contactanos.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/gente.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/eltiempo.png"):
+  
+Started GET "/images/audifono.png" for ::1 at 2022-06-09 00:15:24 -0500
+Started GET "/images/tarjeta-usuario.png" for ::1 at 2022-06-09 00:15:24 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/audifono.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/tarjeta-usuario.png"):
+  
+Started GET "/images/cuadroZafiro.png" for ::1 at 2022-06-09 00:15:24 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/cuadroZafiro.png"):
+  
+Started GET "/images/appstore.png" for ::1 at 2022-06-09 00:15:24 -0500
+Started GET "/images/android.png" for ::1 at 2022-06-09 00:15:24 -0500
+Started GET "/images/cel.png" for ::1 at 2022-06-09 00:15:24 -0500
+Started GET "/images/convenio.png" for ::1 at 2022-06-09 00:15:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/appstore.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/android.png"):
+  
+Started GET "/images/tarjeta-medico.png" for ::1 at 2022-06-09 00:15:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/cel.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/convenio.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/tarjeta-medico.png"):
+  
+Started GET "/images/fondo-zafiro.png" for ::1 at 2022-06-09 00:15:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/fondo-zafiro.png"):
+  
+Started GET "/" for ::1 at 2022-06-09 00:17:35 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 10.2ms | Allocations: 2048)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_ui-js.html.erb (Duration: 0.5ms | Allocations: 161)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 5540)
+Completed 200 OK in 22ms (Views: 16.0ms | ActiveRecord: 5.0ms | Allocations: 6507)
+
+
+Started GET "/images/neurologia.png" for ::1 at 2022-06-09 00:17:35 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/neurologia.png"):
+  
+Started GET "/images/neum.png" for ::1 at 2022-06-09 00:17:35 -0500
+Started GET "/images/oftalmo.png" for ::1 at 2022-06-09 00:17:35 -0500
+Started GET "/images/cardiol.png" for ::1 at 2022-06-09 00:17:35 -0500
+Started GET "/images/osteo.png" for ::1 at 2022-06-09 00:17:35 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/neum.png"):
+  
+Started GET "/images/fondo-zafiro.png" for ::1 at 2022-06-09 00:17:35 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/oftalmo.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/cardiol.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/osteo.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/fondo-zafiro.png"):
+  
+Started GET "/images/tarjeta-usuario.png" for ::1 at 2022-06-09 00:17:35 -0500
+Started GET "/images/tarjeta-medico.png" for ::1 at 2022-06-09 00:17:36 -0500
+Started GET "/images/neurologia.png" for ::1 at 2022-06-09 00:17:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/tarjeta-usuario.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/neurologia.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/tarjeta-medico.png"):
+  
+Started GET "/images/interope.png" for ::1 at 2022-06-09 00:17:36 -0500
+Started GET "/images/wppW.png" for ::1 at 2022-06-09 00:17:36 -0500
+Started GET "/images/cov1.png" for ::1 at 2022-06-09 00:17:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/cov1.png"):
+  
+Started GET "/images/moradoBor.png" for ::1 at 2022-06-09 00:17:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/interope.png"):
+  
+Started GET "/images/doctorMedico.png" for ::1 at 2022-06-09 00:17:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/wppW.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/moradoBor.png"):
+  
+Started GET "/images/team.png" for ::1 at 2022-06-09 00:17:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/doctorMedico.png"):
+  
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 00:17:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/team.png"):
+  
+Started GET "/images/paola.jpg" for ::1 at 2022-06-09 00:17:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paola.jpg"):
+  
+Started GET "/images/yuli.png" for ::1 at 2022-06-09 00:17:36 -0500
+Started GET "/images/david.png" for ::1 at 2022-06-09 00:17:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/yuli.png"):
+  
+Started GET "/images/elvia.jpg" for ::1 at 2022-06-09 00:17:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/david.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/elvia.jpg"):
+  
+Started GET "/images/clavijo.jpg" for ::1 at 2022-06-09 00:17:36 -0500
+Started GET "/images/pierre.jpg" for ::1 at 2022-06-09 00:17:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/clavijo.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/pierre.jpg"):
+  
+Started GET "/images/edwin.jpg" for ::1 at 2022-06-09 00:17:36 -0500
+Started GET "/images/maria.jpg" for ::1 at 2022-06-09 00:17:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/edwin.jpg"):
+  
+Started GET "/images/sebas.png" for ::1 at 2022-06-09 00:17:37 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/maria.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/sebas.png"):
+  
+Started GET "/images/medico-fon.png" for ::1 at 2022-06-09 00:17:37 -0500
+Started GET "/images/notired.png" for ::1 at 2022-06-09 00:17:37 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/notired.png"):
+  
+Started GET "/images/forr.png" for ::1 at 2022-06-09 00:17:37 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/forr.png"):
+  
+Started GET "/images/eltiempo.png" for ::1 at 2022-06-09 00:17:37 -0500
+Started GET "/images/contactanos.png" for ::1 at 2022-06-09 00:17:37 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/medico-fon.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/eltiempo.png"):
+  
+Started GET "/images/audifono.png" for ::1 at 2022-06-09 00:17:37 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/contactanos.png"):
+  
+Started GET "/images/cuadroZafiro.png" for ::1 at 2022-06-09 00:17:37 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/audifono.png"):
+  
+Started GET "/images/appstore.png" for ::1 at 2022-06-09 00:17:37 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/cuadroZafiro.png"):
+  
+Started GET "/images/gente.png" for ::1 at 2022-06-09 00:17:37 -0500
+Started GET "/images/cel.png" for ::1 at 2022-06-09 00:17:37 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/appstore.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/gente.png"):
+  
+Started GET "/images/convenio.png" for ::1 at 2022-06-09 00:17:37 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/cel.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/convenio.png"):
+  
+Started GET "/images/android.png" for ::1 at 2022-06-09 00:17:38 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/android.png"):
+  
+Started GET "/" for ::1 at 2022-06-09 00:18:52 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2046)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_ui-js.html.erb (Duration: 0.4ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 5553)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.2ms | Allocations: 6520)
+
+
+Started GET "/images/neurologia.png" for ::1 at 2022-06-09 00:18:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/neurologia.png"):
+  
+Started GET "/images/oftalmo.png" for ::1 at 2022-06-09 00:18:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/oftalmo.png"):
+  
+Started GET "/images/neum.png" for ::1 at 2022-06-09 00:18:52 -0500
+Started GET "/images/cardiol.png" for ::1 at 2022-06-09 00:18:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/cardiol.png"):
+  
+Started GET "/images/osteo.png" for ::1 at 2022-06-09 00:18:52 -0500
+Started GET "/images/fondo-zafiro.png" for ::1 at 2022-06-09 00:18:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/fondo-zafiro.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/neum.png"):
+  
+Started GET "/images/interope.png" for ::1 at 2022-06-09 00:18:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/osteo.png"):
+  
+Started GET "/images/tarjeta-usuario.png" for ::1 at 2022-06-09 00:18:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/interope.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/tarjeta-usuario.png"):
+  
+Started GET "/images/tarjeta-medico.png" for ::1 at 2022-06-09 00:18:52 -0500
+Started GET "/images/oftalmo.png" for ::1 at 2022-06-09 00:18:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/oftalmo.png"):
+  
+Started GET "/images/neurologia.png" for ::1 at 2022-06-09 00:18:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/tarjeta-medico.png"):
+  
+Started GET "/images/cov1.png" for ::1 at 2022-06-09 00:18:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/neurologia.png"):
+  
+Started GET "/images/moradoBor.png" for ::1 at 2022-06-09 00:18:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/cov1.png"):
+  
+Started GET "/images/wppW.png" for ::1 at 2022-06-09 00:18:52 -0500
+Started GET "/images/doctorMedico.png" for ::1 at 2022-06-09 00:18:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/wppW.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/moradoBor.png"):
+  
+Started GET "/images/notired.png" for ::1 at 2022-06-09 00:18:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/doctorMedico.png"):
+  
+Started GET "/images/clavijo.jpg" for ::1 at 2022-06-09 00:18:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/clavijo.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/notired.png"):
+  
+Started GET "/images/gente.png" for ::1 at 2022-06-09 00:18:53 -0500
+Started GET "/images/maria.jpg" for ::1 at 2022-06-09 00:18:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/gente.png"):
+  
+Started GET "/images/eltiempo.png" for ::1 at 2022-06-09 00:18:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/maria.jpg"):
+  
+Started GET "/images/paola.jpg" for ::1 at 2022-06-09 00:18:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/paola.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/eltiempo.png"):
+  
+Started GET "/images/forr.png" for ::1 at 2022-06-09 00:18:53 -0500
+Started GET "/images/pierre.jpg" for ::1 at 2022-06-09 00:18:53 -0500
+Started GET "/images/team.png" for ::1 at 2022-06-09 00:18:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/pierre.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/forr.png"):
+  
+Started GET "/images/edwin.jpg" for ::1 at 2022-06-09 00:18:53 -0500
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 00:18:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/team.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/edwin.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/images/contactanos.png" for ::1 at 2022-06-09 00:18:53 -0500
+Started GET "/images/yuli.png" for ::1 at 2022-06-09 00:18:53 -0500
+Started GET "/images/david.png" for ::1 at 2022-06-09 00:18:53 -0500
+Started GET "/images/sebas.png" for ::1 at 2022-06-09 00:18:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/david.png"):
+  
+Started GET "/images/audifono.png" for ::1 at 2022-06-09 00:18:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/contactanos.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/yuli.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/sebas.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/audifono.png"):
+  
+Started GET "/images/cuadroZafiro.png" for ::1 at 2022-06-09 00:18:54 -0500
+Started GET "/images/appstore.png" for ::1 at 2022-06-09 00:18:54 -0500
+Started GET "/images/android.png" for ::1 at 2022-06-09 00:18:54 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/cuadroZafiro.png"):
+  
+Started GET "/images/cel.png" for ::1 at 2022-06-09 00:18:54 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/appstore.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/cel.png"):
+  
+Started GET "/images/convenio.png" for ::1 at 2022-06-09 00:18:54 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/convenio.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/android.png"):
+  
+Started GET "/images/elvia.jpg" for ::1 at 2022-06-09 00:18:54 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/elvia.jpg"):
+  
+Started GET "/images/medico-fon.png" for ::1 at 2022-06-09 00:19:08 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/medico-fon.png"):
+  
+Started GET "/" for ::1 at 2022-06-09 00:21:14 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2045)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 8.2ms | Allocations: 2859)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 8337)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.2ms | Allocations: 9267)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_notifications with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/jsagudelo/codigo/blockchain/ethereum-on-rails/app/views"
+  * "/usr/share/rvm/gems/ruby-3.0.3/gems/actiontext-7.0.2/app/views"
+  * "/usr/share/rvm/gems/ruby-3.0.3/gems/actionmailbox-7.0.2/app/views"
+
+Did you mean?  layouts/action_text/contents/content
+               partials/navbar
+               partials/footer
+               action_text/contents/content
+               partials/ui-js
+               partials/alerts):
+    34:           </ul>
+    35:           <ul class="navbar-nav ">
+    36:             
+    37:             <%= render 'layouts/notifications' %>
+    38:             <%= render 'user/session_manager' %>
+    39:           </ul>
+    40:         </div>
+  
+app/views/partials/_navbar.html.erb:37
+app/views/layouts/application.html.erb:40
+Started GET "/" for ::1 at 2022-06-09 00:35:06 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 28.1ms | Allocations: 2961)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 25.6ms | Allocations: 6949)
+  Rendered layout layouts/application.html.erb (Duration: 67.1ms | Allocations: 13336)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 3.0ms | Allocations: 14309)
+
+
+  
+ActionView::Template::Error (undefined method `posts_path' for #<ActionDispatch::Routing::RoutesProxy:0x00007fe8d5294580 @scope=#<PagesController:0x00000000057dc8>, @routes=#<ActionDispatch::Routing::RouteSet:0x000055cae00367f8>, @helpers=#<Module:0x000055cae06a2ee8>, @script_namer=nil>):
+    59:                 </a>
+    60:               </li>
+    61:               <li>
+    62:                 <%= link_to main_app.posts_path  do %>
+    63:                 <img src="/images/foro.png" alt="" class="iconoInicio " >
+    64:                   <span class="tituloSide">Foro</span>                          
+    65:                <% end %> 
+  
+app/views/partials/_navbar.html.erb:62
+app/views/layouts/application.html.erb:40
+Started GET "/" for ::1 at 2022-06-09 00:35:38 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2047)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.6ms | Allocations: 309)
+  Rendered partials/_alerts.html.erb (Duration: 0.3ms | Allocations: 183)
+  Rendered partials/_footer.html.erb (Duration: 0.3ms | Allocations: 215)
+  Rendered partials/_ui-js.html.erb (Duration: 0.3ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 6677)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.2ms | Allocations: 7686)
+
+
+Started GET "/images/logo_zafiro2.png" for ::1 at 2022-06-09 00:35:38 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo_zafiro2.png"):
+  
+Started GET "/images/oftalmo.png" for ::1 at 2022-06-09 00:35:38 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/oftalmo.png"):
+  
+Started GET "/images/inicio.png" for ::1 at 2022-06-09 00:35:38 -0500
+Started GET "/images/foro.png" for ::1 at 2022-06-09 00:35:38 -0500
+Started GET "/images/neurologia.png" for ::1 at 2022-06-09 00:35:38 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/inicio.png"):
+  
+Started GET "/images/fondo-zafiro.png" for ::1 at 2022-06-09 00:35:38 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/foro.png"):
+  
+Started GET "/images/cardiol.png" for ::1 at 2022-06-09 00:35:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/neurologia.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/fondo-zafiro.png"):
+  
+Started GET "/images/osteo.png" for ::1 at 2022-06-09 00:35:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/cardiol.png"):
+  
+Started GET "/images/neum.png" for ::1 at 2022-06-09 00:35:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/osteo.png"):
+  
+Started GET "/images/interope.png" for ::1 at 2022-06-09 00:35:39 -0500
+Started GET "/images/cov1.png" for ::1 at 2022-06-09 00:35:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/interope.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/neum.png"):
+  
+Started GET "/images/moradoBor.png" for ::1 at 2022-06-09 00:35:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/cov1.png"):
+  
+Started GET "/images/wppW.png" for ::1 at 2022-06-09 00:35:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/moradoBor.png"):
+  
+Started GET "/images/doctorMedico.png" for ::1 at 2022-06-09 00:35:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/wppW.png"):
+  
+Started GET "/images/team.png" for ::1 at 2022-06-09 00:35:39 -0500
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 00:35:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/doctorMedico.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/team.png"):
+  
+Started GET "/images/paola.jpg" for ::1 at 2022-06-09 00:35:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/images/yuli.png" for ::1 at 2022-06-09 00:35:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/yuli.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/paola.jpg"):
+  
+Started GET "/images/david.png" for ::1 at 2022-06-09 00:35:39 -0500
+Started GET "/images/elvia.jpg" for ::1 at 2022-06-09 00:35:39 -0500
+Started GET "/images/clavijo.jpg" for ::1 at 2022-06-09 00:35:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/david.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/elvia.jpg"):
+  
+Started GET "/images/edwin.jpg" for ::1 at 2022-06-09 00:35:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/clavijo.jpg"):
+  
+Started GET "/images/pierre.jpg" for ::1 at 2022-06-09 00:35:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/pierre.jpg"):
+  
+Started GET "/images/maria.jpg" for ::1 at 2022-06-09 00:35:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/edwin.jpg"):
+  
+Started GET "/images/sebas.png" for ::1 at 2022-06-09 00:35:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/maria.jpg"):
+  
+Started GET "/images/notired.png" for ::1 at 2022-06-09 00:35:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/sebas.png"):
+  
+Started GET "/images/gente.png" for ::1 at 2022-06-09 00:35:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/notired.png"):
+  
+Started GET "/images/eltiempo.png" for ::1 at 2022-06-09 00:35:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/eltiempo.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/gente.png"):
+  
+Started GET "/images/contactanos.png" for ::1 at 2022-06-09 00:35:40 -0500
+Started GET "/images/forr.png" for ::1 at 2022-06-09 00:35:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/contactanos.png"):
+  
+Started GET "/images/cuadroZafiro.png" for ::1 at 2022-06-09 00:35:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/cuadroZafiro.png"):
+  
+Started GET "/images/appstore.png" for ::1 at 2022-06-09 00:35:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/forr.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/appstore.png"):
+  
+Started GET "/images/audifono.png" for ::1 at 2022-06-09 00:35:40 -0500
+Started GET "/images/cel.png" for ::1 at 2022-06-09 00:35:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/audifono.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/cel.png"):
+  
+Started GET "/images/convenio.png" for ::1 at 2022-06-09 00:35:40 -0500
+Started GET "/images/linkedin.png" for ::1 at 2022-06-09 00:35:41 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/linkedin.png"):
+  
+Started GET "/images/twitter.png" for ::1 at 2022-06-09 00:35:41 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/convenio.png"):
+  
+Started GET "/images/youtube.png" for ::1 at 2022-06-09 00:35:41 -0500
+Started GET "/images/facebook.png" for ::1 at 2022-06-09 00:35:41 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/facebook.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/youtube.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/twitter.png"):
+  
+Started GET "/images/instagram.png" for ::1 at 2022-06-09 00:35:41 -0500
+Started GET "/images/logoFoter.png" for ::1 at 2022-06-09 00:35:41 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/instagram.png"):
+  
+Started GET "/images/tarjeta-medico.png" for ::1 at 2022-06-09 00:35:41 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/logoFoter.png"):
+  
+Started GET "/images/android.png" for ::1 at 2022-06-09 00:35:41 -0500
+Started GET "/images/oftalmo.png" for ::1 at 2022-06-09 00:35:41 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/android.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/tarjeta-medico.png"):
+  
+Started GET "/images/neurologia.png" for ::1 at 2022-06-09 00:35:41 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/oftalmo.png"):
+  
+Started GET "/images/cardiol.png" for ::1 at 2022-06-09 00:35:41 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/neurologia.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/cardiol.png"):
+  
+Started GET "/images/tarjeta-usuario.png" for ::1 at 2022-06-09 00:35:41 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/tarjeta-usuario.png"):
+  
+Started GET "/" for ::1 at 2022-06-09 00:38:02 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2045)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.7ms | Allocations: 305)
+  Rendered partials/_alerts.html.erb (Duration: 0.5ms | Allocations: 181)
+  Rendered partials/_footer.html.erb (Duration: 0.4ms | Allocations: 214)
+  Rendered partials/_ui-js.html.erb (Duration: 0.3ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 6662)
+Completed 200 OK in 20ms (Views: 17.4ms | ActiveRecord: 0.5ms | Allocations: 7629)
+
+
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 00:38:02 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/images/android.png" for ::1 at 2022-06-09 00:38:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/android.png"):
+  
+Started GET "/images/appstore.png" for ::1 at 2022-06-09 00:38:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/appstore.png"):
+  
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 00:38:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/" for ::1 at 2022-06-09 00:39:18 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 3.2ms | Allocations: 942)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.3ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 36.2ms | Allocations: 9474)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.1ms | Allocations: 9910)
+
+
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 00:39:18 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/images/appstore.png" for ::1 at 2022-06-09 00:39:18 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/appstore.png"):
+  
+Started GET "/images/android.png" for ::1 at 2022-06-09 00:39:18 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/android.png"):
+  
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 00:39:19 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/" for ::1 at 2022-06-09 00:40:38 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 4.8ms | Allocations: 942)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.2ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 4041)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.2ms | Allocations: 4460)
+
+
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 00:40:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/images/appstore.png" for ::1 at 2022-06-09 00:40:39 -0500
+Started GET "/images/android.png" for ::1 at 2022-06-09 00:40:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/android.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/appstore.png"):
+  
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 00:40:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/" for ::1 at 2022-06-09 00:41:59 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 3.0ms | Allocations: 942)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.2ms | Allocations: 50)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 4041)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.1ms | Allocations: 4461)
+
+
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 00:42:00 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/images/appstore.png" for ::1 at 2022-06-09 00:42:00 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/appstore.png"):
+  
+Started GET "/images/android.png" for ::1 at 2022-06-09 00:42:00 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/android.png"):
+  
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 00:42:00 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/signup" for ::1 at 2022-06-09 00:42:01 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/new.html.erb within layouts/application (Duration: 11.7ms | Allocations: 4851)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.1ms | Allocations: 53)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 53)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 7985)
+Completed 200 OK in 22ms (Views: 18.5ms | ActiveRecord: 0.8ms | Allocations: 10273)
+
+
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 00:42:02 -0500
+Started GET "/images/appstore.png" for ::1 at 2022-06-09 00:42:02 -0500
+Started GET "/images/android.png" for ::1 at 2022-06-09 00:42:02 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/appstore.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/android.png"):
+  
+Started GET "/login" for ::1 at 2022-06-09 00:42:07 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered sessions/new.html.erb within layouts/application (Duration: 11.3ms | Allocations: 3414)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.2ms | Allocations: 53)
+  Rendered partials/_alerts.html.erb (Duration: 0.4ms | Allocations: 53)
+  Rendered partials/_footer.html.erb (Duration: 0.2ms | Allocations: 50)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | Allocations: 6530)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.2ms | Allocations: 7411)
+
+
+Started GET "/api/v1/users/0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2" for ::1 at 2022-06-09 00:42:08 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"}
+  [1m[36mUser Load (12.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:30:in `show'
+Completed 200 OK in 19ms (Views: 0.5ms | ActiveRecord: 12.6ms | Allocations: 1741)
+
+
+Started POST "/login" for ::1 at 2022-06-09 00:42:12 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "eth_message"=>"Ethereum on Rails,1654753328853,d0d08e5f-9f53-4e26-b94a-68e42a70044e", "eth_address"=>"0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2", "eth_signature"=>"0x766f47f82d5de4d17af22767a77b8d671377a9ebd99a0677a18806e15135a4bb6c0add545574cb1b79e3731817733ebbd3bcfb719e1ed097039ca88e3ae12e131b"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."eth_address" = ? AND "users"."id" != ? LIMIT ?[0m  [["eth_address", "0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."eth_nonce" = ? AND "users"."id" != ? LIMIT ?[0m  [["eth_nonce", "a376a4e7-b249-42f7-96d8-6e562d579a60"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "byson"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "eth_nonce" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["eth_nonce", "a376a4e7-b249-42f7-96d8-6e562d579a60"], ["updated_at", "2022-06-09 05:42:12.403951"], ["id", 2]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 59ms (ActiveRecord: 4.9ms | Allocations: 7961)
+
+
+Started GET "/" for ::1 at 2022-06-09 00:42:12 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2872)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.2ms | Allocations: 51)
+  Rendered partials/_alerts.html.erb (Duration: 0.3ms | Allocations: 56)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 5983)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.2ms | Allocations: 6438)
+
+
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 00:42:12 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/images/appstore.png" for ::1 at 2022-06-09 00:42:12 -0500
+Started GET "/images/android.png" for ::1 at 2022-06-09 00:42:12 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/appstore.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/android.png"):
+  
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 00:42:13 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/" for ::1 at 2022-06-09 00:57:36 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 13.9ms | Allocations: 10859)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.7ms | Allocations: 320)
+  Rendered partials/_alerts.html.erb (Duration: 0.5ms | Allocations: 183)
+  Rendered partials/_footer.html.erb (Duration: 0.8ms | Allocations: 215)
+  Rendered partials/_ui-js.html.erb (Duration: 0.5ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 86.0ms | Allocations: 27532)
+Completed 200 OK in 95ms (Views: 87.8ms | ActiveRecord: 0.7ms | Allocations: 31228)
+
+
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 00:57:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/images/appstore.png" for ::1 at 2022-06-09 00:57:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/appstore.png"):
+  
+Started GET "/images/android.png" for ::1 at 2022-06-09 00:57:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/android.png"):
+  
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 00:57:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started POST "/logout" for ::1 at 2022-06-09 00:57:53 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 561)
+
+
+Started GET "/" for ::1 at 2022-06-09 00:57:53 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1144)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.1ms | Allocations: 51)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 56)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 4375)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.4ms | Allocations: 4848)
+
+
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 00:57:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/images/appstore.png" for ::1 at 2022-06-09 00:57:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/appstore.png"):
+  
+Started GET "/images/android.png" for ::1 at 2022-06-09 00:57:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/android.png"):
+  
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 00:57:54 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/login" for ::1 at 2022-06-09 00:57:55 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered sessions/new.html.erb within layouts/application (Duration: 26.8ms | Allocations: 3460)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.4ms | Allocations: 53)
+  Rendered partials/_alerts.html.erb (Duration: 0.3ms | Allocations: 53)
+  Rendered partials/_footer.html.erb (Duration: 0.3ms | Allocations: 50)
+  Rendered partials/_ui-js.html.erb (Duration: 0.4ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 51.5ms | Allocations: 6582)
+Completed 200 OK in 57ms (Views: 54.6ms | ActiveRecord: 0.4ms | Allocations: 7352)
+
+
+Started GET "/images/android.png" for ::1 at 2022-06-09 00:57:56 -0500
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 00:57:56 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/android.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/images/appstore.png" for ::1 at 2022-06-09 00:57:56 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/appstore.png"):
+  
+Started GET "/api/v1/users/0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2" for ::1 at 2022-06-09 00:57:57 -0500
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:30:in `show'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 1395)
+
+
+Started POST "/login" for ::1 at 2022-06-09 00:58:01 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "eth_message"=>"Ethereum on Rails,1654754277045,a376a4e7-b249-42f7-96d8-6e562d579a60", "eth_address"=>"0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2", "eth_signature"=>"0xe3e639698e4c726f0461f1b2f2ced81be24ab43cd5dd8283c45b6aab7112581429e588409549928e6c953677a20d0ad7ec9216cb6376ba1e10571d141c7a4f451b"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."eth_address" = ? AND "users"."id" != ? LIMIT ?[0m  [["eth_address", "0x00ec3157ee6e44f0223b8385ab7b2938e9b36ab2"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."eth_nonce" = ? AND "users"."id" != ? LIMIT ?[0m  [["eth_nonce", "b5561e78-553d-4a0c-9895-26fcb30168c5"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "byson"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Update (5.6ms)[0m  [1m[33mUPDATE "users" SET "eth_nonce" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["eth_nonce", "b5561e78-553d-4a0c-9895-26fcb30168c5"], ["updated_at", "2022-06-09 05:58:01.111084"], ["id", 2]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 72ms (ActiveRecord: 12.0ms | Allocations: 7948)
+
+
+Started GET "/" for ::1 at 2022-06-09 00:58:01 -0500
+Processing by PagesController#demo as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/demo.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/demo.html.erb within layouts/application (Duration: 11.5ms | Allocations: 2102)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.4ms | Allocations: 51)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 56)
+  Rendered partials/_footer.html.erb (Duration: 0.2ms | Allocations: 49)
+  Rendered partials/_ui-js.html.erb (Duration: 0.2ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 22.5ms | Allocations: 5329)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.7ms | Allocations: 5785)
+
+
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 00:58:01 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  
+Started GET "/images/android.png" for ::1 at 2022-06-09 00:58:01 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/android.png"):
+  
+Started GET "/images/appstore.png" for ::1 at 2022-06-09 00:58:01 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/appstore.png"):
+  
+Started GET "/images/alexis.jpg" for ::1 at 2022-06-09 00:58:01 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/alexis.jpg"):
+  

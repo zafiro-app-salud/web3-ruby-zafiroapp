@@ -1,0 +1,567 @@
+<h1>Ethereum Authentication Demo</h1>
+<p>
+  <em>
+    Rails user-authentication demo purely using an ethereum account,
+    personal sign, and elliptic-curve recovery.
+  </em>
+</p>
+<p>
+  <% if !logged_in? %>
+    Hello, do you wish to
+    <%= link_to "sign up", signup_path %>
+    or
+    <%= link_to "log in", login_path %>?
+  <% else %>
+    Hello <%= current_user.username %>
+    <code><%= current_user.eth_address %></code>;
+    welcome! Do you wish to
+    <%= link_to "log out", logout_path, method: :destroy %>?
+  <% end %>
+</p>
+
+<br><br><br>
+<div class="container">
+<br><br>
+  <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-12 fondoInicial">
+          <div class="animadoFondo">                
+          </div>            
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12 ">
+          <br>
+          <h3>Conectamos especialistas en salud con usuarios</h3>
+          <br>
+          <p>Te invitamos a que hagas parte de nuestra plataforma y
+             crees tu perfil de manera gratuita.
+          </p>  
+          <br>
+          <div >                
+              <%# <%= link_to new_user_registration_path do %>          
+                  <%# <button class=" botonNuevaPagina ">Regístrarme</button>
+              <%# <% end %>  
+              
+          </div>       
+      </div>
+  </div>
+  <div class="row">
+      <br><br>
+      <h2 class="center">Empoderamos a cada actor del sistema en salud</h2>
+      <div class="row">            
+          <div class="col-lg-6 col-md-12 col-sm-12">
+              <div class="cartaNewLeft ">
+                  <div class="cartaSobreIzquierda">
+                      <div class="textoInterno center">
+                          <br>
+                          
+                          <h2>¿Eres médico?</h2>                            
+                          <p>Enlista la disponibilidad, los precios y  todo tu 
+                              portafolio de servicios médicos y conecta con usuarios de 
+                              todo el país.
+                          </p>
+                          
+                          <button class="btn-secundario ">
+                              Ver más
+                          </button> 
+                      </div>
+                  </div>
+              </div>
+              
+          </div>
+          
+          <div class="col-lg-6 col-md-12 col-sm-12">
+              <div class="cartaNewDerecha">                
+                  <div class="cartaSobreDerecha">
+                      <div class="textoInterno center">
+                          <br> 
+                          
+                          <h2>¿Eres usuario?</h2>                            
+                          <p>Administra, gestiona y almacena 
+                              toda tu información 
+                              clínica y accede 
+                              a los servicios de salud ofertados 
+                              por los especialistas en la plataforma.                                
+                          </p>
+                                            
+                          <button class="botonrellenoMOrado">
+                              Ver más
+                          </button> 
+                      
+            
+                          
+                      </div>
+                  </div>
+              </div>                  
+          </div>
+          
+      </div>
+      
+
+    <div class="row">
+        <div class="center">
+            <br><br><br>
+            <h2 >Encuentra especialistas y agenda tu cita médica</h2>
+            <br>
+            <p class="">Encuentra el especialista que estás buscando en el directorio médico de Zafiro app salud,
+            puedes buscar por especialidad, especialista o ubicación.
+            </p>  
+            <br>
+            <div class="container">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class=" carousel box-carousel d-none d-sm-block ">
+                        <div class="box carusel">
+                          <div class="cartaSlider ">
+                              <img src="/images/neurologia.png" alt="" class="imagenEspecialidad">
+                              <h3 class="subtitular">Neurología</h3>
+                          </div>              
+                        </div>
+                        <div class="box carusel">
+                          <div class="cartaSlider ">
+                              <img src="/images/oftalmo.png" alt="" class="imagenEspecialidad">
+                              <h3 class="subtitular">Oftalmología</h3>
+                          </div>  
+                        </div>
+                        <div class="box carusel">
+                          <div class="cartaSlider ">
+                              <img src="/images/neum.png" alt="" class="imagenEspecialidad">
+                              <h3 class="subtitular">Neumología</h3>
+                          </div>
+                          
+                        </div>
+                        <div class="box carusel">
+                          <div class="cartaSlider ">
+                              <img src="/images/cardiol.png" alt="" class="imagenEspecialidad">
+                              <h3 class="subtitular">Cardiología</h3>
+                          </div>
+                        </div>
+                        <div class="box carusel">
+                          <div class="cartaSlider ">
+                              <img src="/images/osteo.png" alt="" class="imagenEspecialidad">
+                              <h3 class="subtitular">Osteología</h3>
+                          </div>                 
+                        </div>
+                        <div class="box carusel">
+                          <div class="cartaSlider ">
+                              <img src="/images/neurologia.png" alt="" class="imagenEspecialidad">
+                              <h3 class="subtitular">Neurología</h3>
+                          </div>              
+                        </div>
+                        <div class="box carusel">
+                          <div class="cartaSlider ">
+                              <img src="/images/oftalmo.png" alt="" class="imagenEspecialidad">
+                              <h3 class="subtitular">Oftalmología</h3>
+                          </div>  
+                        </div>
+                        <div class="box carusel">
+                          <div class="cartaSlider ">
+                              <img src="/images/neum.png" alt="" class="imagenEspecialidad">
+                              <h3 class="subtitular">Neumología</h3>
+                          </div>                          
+                        </div>
+                      
+                      </div><!-- carousel-->
+                  </div><!--col-->
+                </div><!--row-->
+              </div><!-- container-->             
+        </div>          
+    </div>
+      <div class="row">
+          <div class="center">                
+              <br><br><br>
+              <h2>Visita nuestro foro médico</h2>
+              <br>
+              <p>
+                  El foro médico es un espacio donde además de encontrar contenido de valor,
+                  los especialistas y usuarios podrán interactuar por medio de preguntas y artículos médicos.
+              </p>  
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-12">
+              <img src="/images/forr.png" alt="">
+              <h4>La importancia de la alimentación post abdominoplastia.</h4>
+              <br>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Convallis nunc dignissim bibendum libero. 
+                 Vel orci a urna ut. Sagittis eu vitae risus adipiscing. Id id metus quam sapien sed ultricies gravida
+                 pellentesque accumsan.
+              </p>
+              <br>
+              <h5>Ver más</h5>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12">
+              <img src="/images/interope.png" alt="">
+              <h4>Interoperabilidad de la hisoria clínica en Colombia</h4>
+              <br>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Convallis nunc dignissim bibendum libero. 
+                 Vel orci a urna ut. Sagittis eu vitae risus adipiscing. Id id metus quam sapien sed ultricies gravida
+                 pellentesque accumsan.
+              </p>
+              <br>
+              <h5>Ver más</h5>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12">
+              <img src="/images/cov1.png" alt="">
+              <h4>La importancia de la alimentación post abdominoplastia.</h4>
+              <br>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Convallis nunc dignissim bibendum libero. 
+                 Vel orci a urna ut. Sagittis eu vitae risus adipiscing. Id id metus quam sapien sed ultricies gravida
+                 pellentesque accumsan.
+              </p>
+              <br>
+              <h5>Ver más</h5>
+          </div>
+      </div>
+  </div>
+  <br><br>
+
+  <br>      
+  <br>       
+  <br><br>
+  <div class="row center">
+      
+      <div class="col-lg-12 col-md-12 col-sm-12">  
+          <%# <%= link_to  posts_path  do  %> 
+                  <span class="botonrellenoMOrado">Ir al foro medico</span>
+          <%# <% end %> 
+          <br>
+          <br><br>
+          <br>
+          <div class="moradoBorde">
+              <div class="col-lg-7 col-md-7 col-sm-12">
+                  <br>
+                  <img src="/images/moradoBor.png" alt="" class="videoImagen">
+              </div>
+              <div class="col-lg-5 col-md-5 col-sm-12 leftSpace">
+                  <br><br><br>
+                  <h2 class="textoBlanco">Conoce a 4RZO </h2>
+                  <br>
+                  <p class="textoBlanco">
+                      Nuestro prototipo de Robot para farmacias que busca
+                      automatizar la entrega y recepción de medicamentos en farmacias
+                      intrahospitalarias y comerciales.
+                  </p>
+                  <br>
+                  <br>
+                  <btn class=" botonBlancoPagina "><img src="/images/wppW.png" alt=""> Quiero más info </btn>  
+              </div>
+              
+
+          </div>
+  
+          
+      </div>
+      
+
+
+  </div>
+  <br><br>
+  <div class="row center">
+      <br>
+      <h2 class="center">Preguntas frecuentes</h2>
+      <br>
+      <br><br>
+      <p>
+          Conoce las dudas más frecuentes de nuestra comunidad
+      </p>
+      <br>
+      <br>
+      <div class="col-lg-7 col-md-7 col-sm-12 "> 
+        <img src="/images/doctorMedico.png" alt="">
+      </div>
+      <div class="col-lg-5 col-md-5 col-sm-12"> 
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    ¿Zafiro tiene algún costo?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    ¿Estarán seguros mis datos?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    ¿Necesito instalar algún sotware?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    ¿Puedo crear un perfil teniendo EPS?
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+          </div>   
+                 
+
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row center">
+    <br>
+    <h2 class="center">Somos Zafiro app salud</h2>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>
+        Una startup que por medio de la tecnología, busca crear desarrollos propios que impacten de forma positiva en el mundo. 
+        Contamos con  especialistas en el sector de la salud y TI, tenemos más de quince años de experiencia en ambos sectores; 
+        formando así, una amalgama perfecta para desarrollar este tipo de proyectos.
+
+    </p>
+    <div class="equipo">        
+        <img src="/images/team.png" alt="" class="fondoEquipo">
+        <div class="equipoFoto">
+            <div class="col-sm-12">
+            <div class=" carousel box-carousel d-none d-sm-block ">
+                <div class="box carusel">
+                    <div class="cartaSlider2 ">
+                        <img src="/images/alexis.jpg" alt="" class="fotoEquipo">
+                        <h3 class="subtitular2">Alexis Romero</h3>                    
+                        <h3 class="subtitular2">Medico especialista</h3>
+                    </div>              
+                </div>
+                <div class="box carusel">
+                    <div class="cartaSlider2 ">
+                        <img src="/images/paola.jpg" alt="" class="fotoEquipo">
+                        <h3 class="subtitular2">Paola Quintero</h3>
+                        <h3 class="subtitular2">Asesora comercial</h3>
+                    </div>  
+                </div>
+                <div class="box carusel">
+                    <div class="cartaSlider2 ">
+                        <img src="/images/yuli.png" alt="" class="fotoEquipo">
+                        <h3 class="subtitular2">Yuliana Mesa</h3>
+                        <h3 class="subtitular2">Diseñadora</h3>
+                    </div>
+                    
+                </div>
+                <div class="box carusel">
+                    <div class="cartaSlider2 ">
+                        <img src="/images/david.png" alt="" class="fotoEquipo">
+                        <h3 class="subtitular2">David Ruiz</h3>
+                        <h3 class="subtitular2">Lider Robotica</h3>
+                    </div>
+                </div>
+                <div class="box carusel">
+                    <div class="cartaSlider2 ">
+                        <img src="/images/elvia.jpg" alt="" class="fotoEquipo">
+                    <h3 class="subtitular2">Elvia Pineda</h3>
+                        <h3 class="subtitular2">Desarrolladora</h3>
+                    </div>                 
+                </div>
+                <div class="box carusel">
+                    <div class="cartaSlider2 ">
+                        <img src="/images/clavijo.jpg" alt="" class="fotoEquipo">
+                    <h3 class="subtitular2">Edison Clavijo</h3>
+                        <h3 class="subtitular2">Mecanico</h3>
+                    </div>              
+                </div>
+                <div class="box carusel">
+                    <div class="cartaSlider2 ">
+                        <img src="/images/pierre.jpg" alt="" class="fotoEquipo">
+                    <h3 class="subtitular2">Jean Pierre</h3>
+                        <h3 class="subtitular2">Desarrollador</h3>
+                    </div>  
+                </div>
+                <div class="box carusel">
+                    <div class="cartaSlider2 ">
+                        <img src="/images/edwin.jpg" alt="" class="fotoEquipo">
+                    <h3 class="subtitular2">Edwin Alzate</h3>
+                        <h3 class="subtitular2">Desrrollador</h3>
+                    </div>                          
+                </div>
+                <div class="box carusel">
+                    <div class="cartaSlider2 ">
+                        <img src="/images/maria.jpg" alt="" class="fotoEquipo">
+                        <h3 class="subtitular2">Maria Fernanda </h3>
+                        <h3 class="subtitular2">Desarrolladora</h3>
+                    </div>  
+                </div>
+                
+                <div class="box carusel">
+                    <div class="cartaSlider2 ">
+                        <img src="/images/sebas.png" alt="" class="fotoEquipo">
+                        <h3 class="subtitular2">Sebastian Agudelo</h3>
+                        <h3 class="subtitular2">Lider equipo</h3>
+                    </div>  
+                </div>
+                
+                </div><!-- carousel-->
+            </div><!--col-->
+        </div><!--row-->      
+    </div>
+
+  </div>
+  <div class="row">
+    <br>
+    <h2 class="center">Somos noticia</h2>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p class="center">
+        Conoce los medos de comunicacion que han difundido nuestro proyecto con su comunidad.
+    </p>
+    <div class=" row">
+        <div class="col-lg-4 col-md-4 col-sm-12 center">
+            <a href="https://notired360.com/2021/10/07/jovenes-talentosos-crearon-app/" target="blank">
+                <img src="/images/notired.png" alt="" class="fotoNoticia">            
+            </a>
+            <br>
+            <br>
+            <p class="izquierdFuente">
+                “Equipo de jóvenes talentosos crearon novedosa app para facilitar los procesos administrativos en salud”
+            </p>
+            <a class="tituloOscuro " href="https://notired360.com/2021/10/07/jovenes-talentosos-crearon-app/" target="blank">
+                Ver mas
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 center">
+            <a href="https://gente.com.co/vecinos-de-Laureles-crean-un-robot-para-ayudar-en-las-farmacias/" target="_blank">
+                <img src="/images/gente.png" alt="" class="fotoNoticia">
+            </a>
+            <br>
+            <br>
+            <p class="izquierdFuente">
+                “Vecinos de laureles crean un robot paras ayudar en las farmacias”
+            </p>
+            <a class="tituloOscuro " href="https://gente.com.co/vecinos-de-Laureles-crean-un-robot-para-ayudar-en-las-farmacias/" target="_blank">
+                Ver mas
+            </a>
+            
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 center">
+            <a target="_blank" href="https://www.eltiempo.com/colombia/medellin/un-robot-de-farmacia-llega-para-apoyar-al-sector-de-la-salud-624124?fbclid=IwAR0qdasatVt6eEnSX9rAhoGMcKNhnG9HnWUWK-K5g2TfZFqtwB8w0YN1bV4">
+                <img src="/images/eltiempo.png" alt="" class="fotoNoticia">
+            </a>
+            <br>
+            <br>
+            <p class="izquierdFuente">“Un robot de farmacia llega para apoyar eñ sector salud”</p>
+            <a class="tituloOscuro " target="_blank" href="https://www.eltiempo.com/colombia/medellin/un-robot-de-farmacia-llega-para-apoyar-al-sector-de-la-salud-624124?fbclid=IwAR0qdasatVt6eEnSX9rAhoGMcKNhnG9HnWUWK-K5g2TfZFqtwB8w0YN1bV4">
+                Ver mas
+            </a>
+            
+    
+        </div>
+    
+
+    </div>
+    
+  </div>
+  <br>
+  <br>
+  <div class="row">
+    <br>
+    <h2 class="center">Suscríbete en nuestro newslatter</h2>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p class="center">
+        Regístrate y recibe emails con noticias de Zafiro app Salud 
+    </p>
+    <br><br><br>
+    <div class="col-lg-6 col-md-6 col-sm-6 rigth">
+        <img src="/images/contactanos.png" alt="" class="fotoContactanos">
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-6 ">
+        <div class="cartaHubspot">
+                    <div class="subscribe-wrapper">
+                        <form action="#" class="subscribe-from">
+                            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
+                                <script>
+                                hbspt.forms.create({
+                                region: "na1",
+                                portalId: "19606700",
+                                formId: "c3c38b9b-daf7-4cb5-8bcc-d40e3edd3b5f"
+                                });
+                                </script>
+                            
+                        </form>
+                        <ul class="listaContacto">                            
+                            <li class="textoBlanco"><img src="/images/audifono.png" alt="">  Soporte Telegram +057-319-617-8338</li>                            
+                        </ul>
+                    </div>
+        </div>
+
+    </div>
+
+  </div>
+
+  <br>
+  <br>
+  <div class="row">
+    <br>
+    <h2 class="center">Proximamente </h2> 
+    <p class="center">
+        Regístrate y recibe emails con noticias de Zafiro app Salud 
+    </p>
+    
+    <br><br><br>
+    <br><br><br>
+    <div class="fondoMorado">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 "> 
+                <br><br><br>
+                <ul class="listaDescarga">
+                    <li><img src="/images/cuadroZafiro.png" alt="" class=""></li>
+                    
+                    <li><h1 class="textoBlanco">Zafiro app salud</h1></li>
+                </ul>     
+                <ul class="listaDescarga">
+                    <li><img src="/images/appstore.png" alt="" class=""></li>                    
+                    <li><img src="/images/android.png" alt="" class="androide"></li>
+                </ul>         
+              
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 ">
+                <img src="/images/cel.png" alt="" class="celular">
+            </div>
+
+
+        </div>
+        
+    </div>
+        
+
+  </div>
+
+  <div class="row">
+    <br>
+    <h2 class="center">Con el apoyo de </h2> 
+    <li><img src="/images/convenio.png" alt="" class="apoyos"></li>     
+  </div>
+  
+  
+</div>

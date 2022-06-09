@@ -1,0 +1,32 @@
+<h1>Ethereum Sign-Up</h1>
+<p>
+  <em>
+    Connect to an Ethereum wallet and retrieve an Ethereum
+    account. Allow the user to also specify a user name. For simplicity, we do
+    not verify the user actually owning the account. This is only required for
+    log-ins.
+  </em>
+</p>
+<p>
+  <% if !logged_in? %>
+    <%= form_for @user, url: signup_path do |form| %>
+      <%= form.label "Name" %>
+      <%= form.text_field :username %> <br />
+      <%= form.text_field :eth_address, readonly: true, class: "eth_address" %> <br />
+    <% end %>
+    <button class="eth_connect">Sign-up with Ethereum</button>
+    <br /><br />... or
+    <%= link_to "log in", login_path %>
+    instead? or
+    <%= link_to "go back", root_path %>?
+  <% else %>
+    Hello
+    <code><%= current_user.eth_address %></code>!
+    Do you wish to
+    <%= link_to "log out", logout_path, method: :destroy %>
+    or
+    <%= link_to "go back", root_path %>?
+  <% end %>
+</p>
+
+<%= javascript_pack_tag "users_new" %>

@@ -1,0 +1,10 @@
+<% if notice %>
+ <script>
+swal({ title: "<%= notice %>",
+  type: "success", 
+  showConfirmButton: false,
+  closeOnConfirm: true, position: 'top-end',
+  background: '#1A5276',
+  timer: 4000  });
+</script>
+ <% end %>
