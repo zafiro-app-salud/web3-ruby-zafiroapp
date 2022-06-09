@@ -10476,3 +10476,161 @@ Processing by Api::V1::UsersController#show as */*
 Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 951)
 
 
+Started GET "/" for 172.18.0.1 at 2022-06-09 21:34:20 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#landing as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/landing.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/landing.html.erb within layouts/application (Duration: 9.5ms | Allocations: 5892)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered user/_session_manager.html.erb (Duration: 3.8ms | Allocations: 2272)
+  Rendered partials/_navbar.html.erb (Duration: 4.6ms | Allocations: 2704)
+  Rendered partials/_alerts.html.erb (Duration: 0.3ms | Allocations: 179)
+  Rendered partials/_footer.html.erb (Duration: 0.4ms | Allocations: 211)
+  Rendered partials/_ui-js.html.erb (Duration: 0.2ms | Allocations: 154)
+  Rendered layout layouts/application.html.erb (Duration: 141.2ms | Allocations: 49961)
+Completed 200 OK in 150ms (Views: 143.5ms | ActiveRecord: 0.8ms | Allocations: 53736)
+
+
+Started GET "/login" for 172.18.0.1 at 2022-06-09 21:34:28 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered sessions/new.html.erb within layouts/application (Duration: 13.1ms | Allocations: 3954)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered user/_session_manager.html.erb (Duration: 9.1ms | Allocations: 1873)
+  Rendered partials/_navbar.html.erb (Duration: 10.8ms | Allocations: 2008)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 46)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 46)
+  Rendered layout layouts/application.html.erb (Duration: 37.9ms | Allocations: 10276)
+Completed 200 OK in 43ms (Views: 40.3ms | ActiveRecord: 0.2ms | Allocations: 11176)
+
+
+Started GET "/api/v1/users/0x169118f768035461056e4420e56d06ea71e3e63a" for 172.18.0.1 at 2022-06-09 21:34:30 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"0x169118f768035461056e4420e56d06ea71e3e63a"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x169118f768035461056e4420e56d06ea71e3e63a"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:30:in `show'
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 10458)
+
+
+Started POST "/login" for 172.18.0.1 at 2022-06-09 21:34:33 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "eth_message"=>"Autenticacion Zafiro app salud,1654810470636,1d09360f-84e9-4da4-a91e-23b6bd636db5", "eth_address"=>"0x169118f768035461056e4420e56d06ea71e3e63a", "eth_signature"=>"0xacc239615832ea94ac05b47c257780e2f1cb5fa1882f837ab53d898124ecf7df54ff4d9cac46aad2170c9170ad48dee4004fe19cb3a37cff9100b6703816fc7d1b"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."eth_address" = ? LIMIT ?[0m  [["eth_address", "0x169118f768035461056e4420e56d06ea71e3e63a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."eth_address" = ? AND "users"."id" != ? LIMIT ?[0m  [["eth_address", "0x169118f768035461056e4420e56d06ea71e3e63a"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."eth_nonce" = ? AND "users"."id" != ? LIMIT ?[0m  [["eth_nonce", "700d7578-ddaf-4157-b3a6-887769d9e7d7"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "nuevo"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "eth_nonce" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["eth_nonce", "700d7578-ddaf-4157-b3a6-887769d9e7d7"], ["updated_at", "2022-06-09 21:34:33.712773"], ["id", 5]]
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/sessions_controller.rb:57:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 34ms (ActiveRecord: 5.0ms | Allocations: 8279)
+
+
+Started GET "/" for 172.18.0.1 at 2022-06-09 21:34:33 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#landing as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/landing.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/landing.html.erb within layouts/application (Duration: 7.7ms | Allocations: 2879)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered user/_session_manager.html.erb (Duration: 5.8ms | Allocations: 1608)
+  Rendered partials/_navbar.html.erb (Duration: 6.3ms | Allocations: 1741)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 45)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 45)
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 8123)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.3ms | Allocations: 8576)
+
+
+Started POST "/logout" for 172.18.0.1 at 2022-06-09 21:34:37 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 336)
+
+
+Started GET "/" for 172.18.0.1 at 2022-06-09 21:34:37 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#landing as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/landing.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/landing.html.erb within layouts/application (Duration: 2.5ms | Allocations: 933)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered user/_session_manager.html.erb (Duration: 6.7ms | Allocations: 1797)
+  Rendered partials/_navbar.html.erb (Duration: 7.1ms | Allocations: 1926)
+  Rendered partials/_alerts.html.erb (Duration: 0.2ms | Allocations: 52)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 45)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 45)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 6347)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.2ms | Allocations: 6775)
+
+
+Started GET "/" for 172.18.0.1 at 2022-06-09 21:44:33 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#landing as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/landing.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered pages/landing.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1889)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered user/_session_manager.html.erb (Duration: 4.6ms | Allocations: 1797)
+  Rendered partials/_navbar.html.erb (Duration: 4.9ms | Allocations: 1926)
+  Rendered partials/_alerts.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered partials/_footer.html.erb (Duration: 0.1ms | Allocations: 45)
+  Rendered partials/_ui-js.html.erb (Duration: 0.1ms | Allocations: 45)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 7305)
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.5ms | Allocations: 7727)
+
+
