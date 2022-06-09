@@ -1,0 +1,42 @@
+<% if current_user %>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <%= current_user.username %>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdown">
+      <%# <li><%= link_to "Nuevo Post", new_post_path, class:"dropdown-item" %>         
+        <%# <li><%= link_to "Edit cuenta", edit_user_registration_path, class:"dropdown-item" %></li> 
+        <li><hr class="dropdown-divider"></li>
+        <li><%= button_to "Cerrar sesión", logout_path, method: :delete, class:"dropdown-item" %></li>
+      </ul>
+    </li>
+  <% else %>
+    <ul class="listaBotonoes">
+              <% if logged_in? %> 
+                  <li>
+                      <%= link_to  main_app.edit_user_registration_path  do  %>
+                          <button class=" botonrellenoMOrado ">Editar perfil</button>
+                      <% end %>  
+                  </li>
+                  <li>
+                      <li><%= button_to "Cerrar sesión", logout_path, method: :delete, class:"botonNuevaPagina2" %></li>
+                      
+                  </li>
+              <% else %>    
+                  <li>
+                      <%= link_to login_path do %>          
+                          <button class=" botonrellenoMOrado ">Iniciar sesión</button>
+                      <% end %>    
+                  </li>
+                  <li>
+                      <%= link_to signup_path do %>          
+                          <button class=" botonNuevaPagina ">Regístrarme</button>
+                      <% end %>    
+                  </li>
+              <% end %>               
+              
+              <li></li>
+              
+          </ul>
+    
+  <% end %>

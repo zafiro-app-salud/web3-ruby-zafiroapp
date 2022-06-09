@@ -35,7 +35,7 @@
           <ul class="navbar-nav ">
             
             <%# <%= render 'layouts/notifications' %>
-            <%# <%= render 'user/session_manager' %> 
+            <%= render 'user/session_manager' %> 
           </ul>
         </div>
       </div>
@@ -45,28 +45,22 @@
 
 
   </div>
-    
+    <br>
   <div class="main_container">
       <div class="sidebar">
-          <div class="sidebar__inner">            
-            <ul>  
-              <li>
-                <%# <%= link_to main_app.root_path  do %> 
-                <img src="/images/inicio.png" alt="" class="iconoInicio " >
+          <div class="sidebar__inner ">            
+            <ul class="center">  
+              <li class="left">
+                <%= link_to root_path  do %> 
+                  <img src="/images/inicio.png" alt="" class="iconoInicio " >
                   <span class="tituloSide">Inicio</span>                          
-               <%# <% end %> 
-          
+                 <% end %>           
                 </a>
               </li>
-              <li>
-                <%# <%= link_to main_app.posts_path  do %>
-                <img src="/images/foro.png" alt="" class="iconoInicio " >
-                  <span class="tituloSide">Foro</span>                          
-               <%# <% end %> 
-          
-                </a>
-              </li>
-   
+              <br>              
+              <br>
+              <br>
+
              
             </ul>
           </div>

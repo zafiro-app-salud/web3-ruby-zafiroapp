@@ -616,6 +616,7 @@ h1 {
   position: relative;
 }
 
+
 .main_container .sidebar .profile{
   display: flex;
   align-items: center;
@@ -1113,7 +1114,7 @@ h1 {
 }
 .cartaNewUser{
   padding: 5% !important;
-  margin-left: -5%;
+  margin-left: -8% !important;
   height: 598px;
   z-index: 20;
   border-radius: 1px 25px 25px 1px;
