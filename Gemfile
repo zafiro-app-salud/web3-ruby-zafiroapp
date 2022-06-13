@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.0.3"
+ruby "3.0.0"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem "rails", "~> 7.0"
@@ -22,7 +22,8 @@ gem "redis", "~> 4.0"
 # Use Active Model has_secure_password
 gem "bcrypt", "~> 3.1"
 # Use Ruby-Eth for signature recovery
-gem "eth", "~> 0.5"
+gem 'eth', '~> 0.5.5'
+gem 'openssl', '~> 3.0'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

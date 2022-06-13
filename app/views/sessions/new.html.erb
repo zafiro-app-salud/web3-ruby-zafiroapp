@@ -1,29 +1,28 @@
-<h1>CELO Log-In</h1>
+<div class="m-3">
+  <h1></span>CELO Log-In</h1>
 <p>
   <em>
     Conéctese a una billetera CELO o Ethereum.
   </em>
 </p>
-<p>
-  <% if !logged_in? %>
-    <%= form_tag "/login", class: "new_session" do %>
-      <%= text_field_tag :eth_message, "", readonly: true, class: "eth_message" %> <br />
-      <%= text_field_tag :eth_address, "", readonly: true, class: "eth_address" %> <br />
-      <%= text_field_tag :eth_signature, "", readonly: true, class: "eth_signature" %> <br />
-    <% end %>
-    <button class="eth_connect">Log-in with Ethereum</button>
-    <br /><br />... or
-    <%= link_to "sign up", signup_path %>
-    instead? or
-    <%= link_to "go back", root_path %>?
-  <% else %>
-    Hola
-    <code><%= current_user.eth_address %></code>!
-    Deseas
-    <%= link_to "Cerrar sesion", logout_path, method: :destroy %>
-    o
-    <%= link_to "Regresar", root_path %>?
+<% if !logged_in? %>
+  <%= form_tag "/login", class: "new_session" do %>
+    <%= text_field_tag :eth_message, "", readonly: true, class: "eth_message" %> <br />
+    <%= text_field_tag :eth_address, "", readonly: true, class: "eth_address" %> <br />
+    <%= text_field_tag :eth_signature, "", readonly: true, class: "eth_signature" %> <br />
   <% end %>
-</p>
-
-<%= javascript_pack_tag "sessions_new" %>
+  <button class="eth_connect btn btn-dark">Log-in with Ethereum</button>
+  <br /><br />... or
+  <%= link_to "sign up", signup_path %>
+  instead? or
+  <%= link_to "go back", root_path %>?
+<% else %>
+  Hola
+  <code><%= current_user.eth_address %></code>!
+  Deseas
+  <%= link_to "Cerrar sesion", logout_path, method: :destroy %>
+  o
+  <%= link_to "Regresar", root_path %>?
+<% end %>
+</div>
+ <%= javascript_pack_tag "sessions_new" %>

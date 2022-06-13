@@ -8,8 +8,9 @@
 
     <%= stylesheet_link_tag "application", media: "all", 'data-turbolinks-track': "reload" %>
     <%= javascript_pack_tag "application", 'data-turbolinks-track': "reload" %>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132757324-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -17,7 +18,6 @@
       gtag('js', new Date());
       gtag('config', 'UA-132757324-3');
     </script>
-    
      <%# bostrap %>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
@@ -25,7 +25,7 @@
 
     <!-- sidebar -->
       <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>              
-      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>        
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
       <!-- carrouser team y especialidades -->
       <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" rel="stylesheet">
       <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
@@ -36,40 +36,33 @@
     <p class="alert" style="color:Tomato"><%= alert %></p>
     <header>
       <div class="parteInicial ">
-        <!-- side barra de navegacion  -->    
+        <!-- side barra de navegacion  -->
         <%= render 'partials/navbar' %>
         <%= render 'partials/alerts' %>
       </div>
-    </header>    
+    </header>
     <br><br><br><br>
     <div class="container">
-      <div class="row">     
-        <div class="contenidoPrincipal">
+      <div class="row">
+        <div class="col-12">
           <main>
             <%= yield %>
-          </main>  
-      
+          </main>
           <%= render 'partials/footer' %>
-
-        </div> 
-        
+        </div>
     </div>
-
-
     </div>
     <%= render 'partials/ui-js' %>
-
     <!-- Page level custom scripts -->
     <script src="https://unpkg.com/sweetalert2@7.8.2/dist/sweetalert2.all.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/alertas.js"></script>
-    
 
 
     <%# para debugiar %>
     <%# <%= debug current_user if logged_in? %>
-    <%# <%= debug session.to_h %> 
+    <%# <%= debug session.to_h %>
 
     <%# scripts partials %>
 
